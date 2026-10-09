@@ -1,0 +1,60 @@
+# Printed under the schedule table. `text` is Markdown, so links and *italics* work.
+# Adapted from the "Reading and resource key" in the Teaching Plan 2026–27.
+
+labels:
+  - label: "Session"
+    text: >-
+      C01–C45 number the 45 core teaching hours in order. R1–R3 are review sessions
+      in Week 10, held only in classes that fall after February 9, and carry no new
+      content. "No class" marks the Sessional Examination I days, February 1–9.
+  - label: "Reading"
+    text: >-
+      Section numbers in the textbook, Saeed B. Niku,
+      [*Introduction to Robotics: Analysis, Control, Applications*](https://www.zybooks.com/catalog/introduction-to-robotics-analysis-control-applications-3e/),
+      3rd edition, Wiley. They follow the standard third edition. The
+      [Indian adaptation](https://www.wileyindia.com/introduction-to-robotics-analysis-control-applications-3ed-an-indian-adaptation.html)
+      numbers Chapter 5 differently: calculation of the Jacobian is §5.10 in the
+      standard edition and §5.11 in the adaptation. A listed section marks relevant
+      reading, not a requirement to cover every topic in it.
+  - label: "Saha"
+    text: >-
+      S. K. Saha, [*Introduction to Robotics*](https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india),
+      McGraw-Hill Education. Read the named topic in the edition you have.
+  - label: "Spong"
+    text: >-
+      M. W. Spong, S. Hutchinson and M. Vidyasagar,
+      [*Robot Modeling and Control*](https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook),
+      Wiley. Read the named topic in the edition you have.
+  - label: "RA/FDP"
+    text: >-
+      [RoboAnalyzer video lectures](https://www.roboanalyzer.com/video-lectures.html).
+      Numbers refer to the 2020 Faculty Development Program series, which appears
+      first on the page.
+  - label: "RA/Planar"
+    text: >-
+      [RoboAnalyzer video lectures](https://www.roboanalyzer.com/video-lectures.html).
+      Numbers refer to the separate 2021 planar-manipulator series, below the FDP series.
+  - label: "RA/Tutorial"
+    text: >-
+      [RoboAnalyzer tutorials](https://www.roboanalyzer.com/tutorials.html). Select the
+      named demonstration on the page.
+  - label: "MR"
+    text: >-
+      Modern Robotics videos and transcripts from Northwestern University. These are
+      additional material, not a prescribed textbook; each session links to its video page.
+
+abbreviations:
+  - label: "DOF"
+    text: "Degree of freedom: an independent motion variable."
+  - label: "Pose"
+    text: "Position and orientation together."
+  - label: "HTM"
+    text: "Homogeneous transformation matrix, which represents a pose in one matrix."
+  - label: "FK"
+    text: "Forward kinematics, which maps joint values to tool pose."
+  - label: "IK"
+    text: "Inverse kinematics, which finds joint values for a target pose."
+  - label: "D-H"
+    text: "The Denavit–Hartenberg convention for assigning link frames and parameters. Unit II uses the classic convention throughout."
+  - label: "R, P"
+    text: "Revolute and prismatic joints. 2R and 3R are chains with two and three revolute joints."

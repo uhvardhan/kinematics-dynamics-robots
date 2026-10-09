@@ -1,0 +1,17 @@
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="masthead__mark" href="{{ site.institute.url }}" aria-label="{{ site.institute.name }}">
+      <img src="{{ site.institute.logo | relative_url }}" alt="{{ site.institute.short }} logo" width="60" height="41">
+    </a>
+    <div class="masthead__text">
+      <a class="masthead__institute" href="{{ site.institute.url }}">{{ site.institute.name }}</a>
+      <a class="masthead__course" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <p class="masthead__meta">
+        {% if site.data.course.code and site.data.course.code != "" %}<span class="code">{{ site.data.course.code }}</span>
+        <span class="masthead__sep" aria-hidden="true">·</span>
+        {% endif %}{{ site.tagline }}
+      </p>
+    </div>
+  </div>
+  <div class="signal-strip" aria-hidden="true"></div>
+</header>

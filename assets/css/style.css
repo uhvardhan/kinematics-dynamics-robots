@@ -1,0 +1,603 @@
+/* ==========================================================================
+   Kinematics and Dynamics of Robots — VNR VJIET
+   Palette encodes the two halves of the course: blueprint blue = kinematics
+   (the geometry of motion), brick red = dynamics (the forces behind it).
+   ========================================================================== */
+
+:root {
+  --ink:        #151d2b;
+  --ink-2:      #3b4557;
+  --ink-3:      #616a7e;
+  --paper:      #fafaf8;
+  --surface:    #f0f2f5;
+  --rule:       #d9dee7;
+  --rule-soft:  #e7eaf0;
+
+  --kin:        #22508f;
+  --kin-tint:   #e5ecf6;
+  --dyn:        #a8392a;
+  --dyn-tint:   #f7e8e4;
+
+  --notice:      var(--kin-tint);
+  --notice-rule: #c9d6ea;
+
+  --wrap:       960px;
+  --font-body:  "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-disp:  "IBM Plex Sans Condensed", "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono:  "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+a { color: var(--kin); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+:focus-visible {
+  outline: 2px solid var(--kin);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--ink);
+  color: #fff;
+  padding: .6rem 1rem;
+  z-index: 50;
+  font-family: var(--font-mono);
+  font-size: .8rem;
+}
+.skip-link:focus { left: 0; }
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* ── Masthead ─────────────────────────────────────────────────────────────── */
+
+.masthead { background: var(--paper); }
+
+.masthead__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding-block: 1.4rem 1.25rem;
+}
+
+.masthead__mark { flex: 0 0 auto; display: block; }
+.masthead__mark img { display: block; width: 60px; height: auto; }
+
+.masthead__text { min-width: 0; }
+
+.masthead__institute {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  line-height: 1.4;
+}
+.masthead__institute:hover { color: var(--ink-2); text-decoration: none; }
+
+.masthead__course {
+  display: block;
+  font-family: var(--font-disp);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 3.2vw, 1.6rem);
+  letter-spacing: -.005em;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-top: .18rem;
+}
+.masthead__course:hover { text-decoration: none; color: var(--kin); }
+
+.masthead__meta {
+  margin: .25rem 0 0;
+  font-size: .84rem;
+  color: var(--ink-3);
+}
+.masthead__sep { padding-inline: .35rem; }
+
+.code {
+  font-family: var(--font-mono);
+  font-size: .82em;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+}
+
+/* The one flourish: motion handing over to the forces behind it. */
+.signal-strip {
+  height: 3px;
+  background: linear-gradient(90deg, var(--kin) 0%, var(--kin) 28%, #6b4477 55%, var(--dyn) 82%, var(--dyn) 100%);
+}
+
+/* ── Navigation ───────────────────────────────────────────────────────────── */
+
+.nav {
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav__list {
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav__list::-webkit-scrollbar { display: none; }
+
+.nav__link {
+  display: block;
+  padding: .85rem 0;
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.nav__link:hover { color: var(--ink); text-decoration: none; }
+.nav__link.is-active { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* ── Main ─────────────────────────────────────────────────────────────────── */
+
+.main { padding-block: 2.75rem 4.5rem; }
+
+/* Pages with wide: true run past the wrap. Must follow .wrap — equal
+   specificity, so source order is what lets it win. The masthead, nav and
+   footer stay at the wrap, so a wide page overhangs them by design. */
+.main--wide { max-width: 1200px; }
+
+/* Inside a wide page, .narrow keeps a block to the regular column, so it lines
+   up with the masthead and nav — e.g. the schedule's note before any week has
+   been filled in. */
+.main--wide .narrow { max-width: calc(var(--wrap) - 3rem); margin-inline: auto; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-disp);
+  font-weight: 600;
+  letter-spacing: -.005em;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(1.75rem, 4.5vw, 2.35rem); font-weight: 700; margin: 0; }
+h2 { font-size: 1.3rem; font-weight: 400; margin: 2.5rem 0 .85rem; }
+h3 { font-size: 1.05rem; margin: 1.9rem 0 .6rem; }
+
+.eyebrow {
+  margin: 0 0 .5rem;
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.lede {
+  margin: .9rem 0 0;
+  font-size: 1.06rem;
+  color: var(--ink-2);
+}
+
+.page-head { padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); margin-bottom: 2rem; }
+
+/* Eyebrow only, no heading under it — the spacing below was sized for a
+   heading and a lede that are no longer there. */
+.page-head--label { padding-bottom: .55rem; margin-bottom: 1.6rem; }
+.page-head--label .eyebrow { margin-bottom: 0; }
+
+/* ── Sections ─────────────────────────────────────────────────────────────── */
+
+.section { margin-top: 3rem; }
+.section:first-child { margin-top: 0; }
+
+/* Highlighted section — used for Updates so notices read as a notice. */
+.section--notice {
+  background: var(--notice);
+  border: 1px solid var(--notice-rule);
+  border-radius: 4px;
+  padding: 1.35rem 1.6rem 1.5rem;
+}
+
+/* The panel carries its own top padding, so the page need not stack its own on top. */
+.main:has(> .section--notice:first-child) { padding-top: 1.25rem; }
+
+.section--notice .section__title { border-bottom-color: var(--notice-rule); }
+.section--notice .update { border-bottom-color: var(--notice-rule); }
+.section--notice .update:last-child { padding-bottom: 0; }
+.section--notice .update__body { color: var(--ink); }
+
+.section__title {
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding-bottom: .55rem;
+  border-bottom: 1px solid var(--rule);
+  margin: 0 0 1.4rem;
+}
+
+/* Loud variant — the display face at heading size, for the sections that carry
+   the page. Must follow .section__title: equal specificity, so source order is
+   what lets it win. */
+.section__title--lead {
+  font-family: var(--font-disp);
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: -.005em;
+  text-transform: none;
+  color: var(--ink);
+  padding-bottom: .5rem;
+  margin-bottom: 1.1rem;
+}
+
+/* ── Updates ──────────────────────────────────────────────────────────────── */
+
+.updates { list-style: none; margin: 0; padding: 0; }
+
+.update {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1.25rem;
+  padding-block: 1.05rem;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.update:first-child { padding-top: 0; }
+.update:last-child { border-bottom: 0; }
+
+.update__date {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: .76rem;
+  color: var(--ink-3);
+  padding-top: .18rem;
+}
+
+.update__body { color: var(--ink-2); }
+.update__body p { margin: 0 0 .5rem; }
+.update__body p:last-child { margin-bottom: 0; }
+
+/* ── Prose ────────────────────────────────────────────────────────────────── */
+
+/* Prose runs the full wrap width, so its right edge lines up with the section
+   rules and the Updates panel instead of stopping short of them. */
+.prose { max-width: none; }
+.prose p { margin: 0 0 1.05rem; color: var(--ink-2); }
+.prose ul, .prose ol { margin: 0 0 1.15rem; padding-left: 1.25rem; color: var(--ink-2); }
+.prose li { margin-bottom: .4rem; }
+.prose li::marker { color: var(--ink-3); }
+.prose strong { color: var(--ink); font-weight: 600; }
+.prose h2:first-child, .prose h3:first-child { margin-top: 0; }
+
+.prose blockquote {
+  margin: 1.4rem 0;
+  padding: .1rem 0 .1rem 1.1rem;
+  border-left: 2px solid var(--rule);
+  color: var(--ink-3);
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: .86em;
+  background: var(--surface);
+  padding: .12em .38em;
+  border-radius: 2px;
+}
+
+.prose pre {
+  background: var(--ink);
+  color: #e8ecea;
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  font-size: .85rem;
+  line-height: 1.6;
+}
+.prose pre code { background: none; padding: 0; color: inherit; }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+.bare { list-style: none; margin: 0; padding: 0; }
+
+/* .prose ul outranks .bare on specificity, so a bare list inside prose — the
+   stacked dates and files in the schedule table — inherits its bottom margin
+   and pads every row out. Win it back. */
+.prose ul.bare { margin: 0; padding: 0; }
+.prose ul.bare li { margin-bottom: .25rem; }
+.prose ul.bare li:last-child { margin-bottom: 0; }
+
+/* ── Tables ───────────────────────────────────────────────────────────────── */
+
+.table-scroll { overflow-x: auto; margin: 0 0 1.5rem; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+}
+
+th {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  text-align: left;
+  padding: .5rem .7rem .5rem 0;
+  border-bottom: 1px solid var(--ink);
+  white-space: nowrap;
+}
+
+td {
+  padding: .7rem .7rem .7rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+  vertical-align: top;
+  color: var(--ink-2);
+}
+td:last-child, th:last-child { padding-right: 0; }
+
+tbody tr:hover td { background: rgba(21, 29, 43, .022); }
+
+.t-num { width: 3.5rem; }
+.t-title { color: var(--ink); font-weight: 400; }
+.t-mono { font-family: var(--font-mono); font-size: .82rem; color: var(--ink-3); white-space: nowrap; }
+.t-center { text-align: center; }
+
+/* ── Spec list ────────────────────────────────────────────────────────────── */
+
+.specs { margin: 1.75rem 0 0; }
+
+/* Straight after a lead heading, the heading's own rule already separates the
+   two — the spec list's top margin and first row border just read as an empty
+   row between two lines. */
+.section__title--lead + .specs { margin-top: 0; }
+.section__title--lead + .specs .specs__row:first-child { border-top: 0; }
+
+.specs__row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1rem;
+  padding-block: .6rem;
+  border-top: 1px solid var(--rule-soft);
+}
+.specs__row:last-child { border-bottom: 1px solid var(--rule-soft); }
+
+.specs dt {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding-top: .2rem;
+}
+.specs dd { margin: 0; color: var(--ink-2); }
+
+/* ── Schedule ─────────────────────────────────────────────────────────────── */
+
+/* One row per session. The week cell spans its sessions and a full-strength
+   rule closes each week, so the grouping reads before the detail does. The
+   min-width keeps the columns legible: narrower screens scroll the table
+   sideways, and phones get the stacked layout further down instead. */
+.schedule { min-width: 54rem; }
+
+.schedule .t-week    { width: 7.5rem; }
+.schedule .t-date    { width: 6.5rem; }
+.schedule .t-session { width: 5rem; }
+.schedule .t-unit    { width: 7rem; }
+.schedule .t-reading { width: 10rem; }
+.schedule .t-files   { width: 10rem; }
+.schedule .t-res     { width: 16rem; }
+
+.schedule td.t-week,
+.schedule tr.is-week-end td { border-bottom-color: var(--rule); }
+
+.t-week__num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  color: var(--ink);
+}
+.t-week__dates {
+  margin-top: .2rem;
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+.schedule td.t-topic { color: var(--ink); }
+
+.schedule-intro { font-size: .93rem; }
+
+/* The key and abbreviations under the table keep to a readable measure, flush
+   left with the table rather than centred under it. */
+.schedule-key { max-width: 60rem; margin-top: 3rem; }
+/* The "key below the table" link lands here; clear the sticky nav. */
+.schedule-key { scroll-margin-top: 4rem; }
+.schedule-key .section__title { margin-top: 2.5rem; }
+.schedule-key .section__title:first-child { margin-top: 0; }
+.schedule-key .specs { margin-top: 0; }
+.schedule-key .specs__row:first-child { border-top: 0; }
+.key dt { text-transform: none; letter-spacing: .02em; font-size: .76rem; color: var(--ink-2); }
+.key dd { font-size: .93rem; }
+
+/* Phones: the table becomes a list. Each week opens with its number and dates,
+   then every session stacks as a block: session and unit on one line, the
+   topic, then reading and resources under small labels. Empty cells drop out. */
+@media (max-width: 640px) {
+  .schedule { display: block; min-width: 0; }
+  .schedule thead { display: none; }
+  .schedule tbody { display: block; }
+  .schedule tr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .3rem .85rem;
+    padding: .95rem 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .schedule tr.is-week-end { border-bottom-color: var(--rule); }
+  .schedule td { display: block; flex: 1 1 100%; padding: 0; border: 0; }
+  .schedule .t-week, .schedule .t-date, .schedule .t-session, .schedule .t-unit,
+  .schedule .t-reading, .schedule .t-files, .schedule .t-res { width: auto; }
+  .schedule td.is-empty { display: none; }
+  .schedule tbody tr:hover td { background: none; }
+
+  .schedule td.t-week {
+    order: -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 .75rem;
+    padding-bottom: .6rem;
+    margin-bottom: .25rem;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .t-week__num { font-weight: 600; }
+  .t-week__num::before { content: "Week "; }
+  .t-week__dates { margin-top: 0; }
+
+  .schedule td.t-date, .schedule td.t-session { flex: 0 0 auto; }
+  .schedule td.t-unit {
+    flex: 1 1 auto;
+    font-family: var(--font-mono);
+    font-size: .76rem;
+    color: var(--ink-3);
+  }
+  .schedule td.t-unit::before { content: "Unit "; }
+  .schedule td.t-topic { order: 1; }
+  .schedule td.t-reading { order: 2; }
+  .schedule td.t-files { order: 3; }
+  .schedule td.t-res { order: 4; }
+  .schedule td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--font-mono);
+    font-size: .64rem;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+}
+
+/* ── People ───────────────────────────────────────────────────────────────── */
+
+/* Portrait tiles in a row: photo above, name under it. Each tile sizes to its
+   own name — a fixed width would wrap the long ones and strand the short. */
+.people {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+}
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: .75rem;
+  min-width: 120px;
+  max-width: 12rem;
+}
+.person__photo { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; }
+.person__name { margin: 0; font-family: var(--font-disp); font-weight: 400; font-size: 1.02rem; }
+.person__role { margin: .1rem 0 0; font-size: .85rem; color: var(--ink-3); }
+
+/* ── Callout ──────────────────────────────────────────────────────────────── */
+
+.note {
+  background: var(--surface);
+  border-left: 3px solid var(--ink-3);
+  padding: .9rem 1.1rem;
+  margin: 1.5rem 0;
+  font-size: .93rem;
+  color: var(--ink-2);
+}
+.note p:last-child { margin-bottom: 0; }
+.note strong { color: var(--ink); }
+
+/* ── Footer ───────────────────────────────────────────────────────────────── */
+
+.footer {
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  padding-block: 2.5rem 1.75rem;
+  font-size: .87rem;
+  color: var(--ink-3);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer__block p { margin: 0 0 .4rem; }
+.footer__dept { font-family: var(--font-disp); font-weight: 600; color: var(--ink); font-size: 1rem; }
+
+.footer__label {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: .5rem !important;
+}
+
+.footer__block ul { list-style: none; margin: 0; padding: 0; }
+.footer__block li { margin-bottom: .3rem; }
+.footer__block a { color: var(--ink-2); }
+
+/* ── Small screens ────────────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .wrap { padding-inline: 1.15rem; }
+  .masthead__inner { gap: .85rem; }
+  .masthead__mark img { width: 50px; height: auto; }
+  .update { grid-template-columns: 1fr; gap: .3rem; }
+  /* Shrink the tiles rather than let them wrap — two still fit a phone. */
+  .people { gap: 1.25rem 1rem; }
+  .person { max-width: 9.5rem; gap: .6rem; }
+  .person__photo { width: 96px; height: 96px; }
+  .specs__row { grid-template-columns: 1fr; gap: .15rem; }
+  .footer__inner { grid-template-columns: 1fr; gap: 1.5rem; }
+}

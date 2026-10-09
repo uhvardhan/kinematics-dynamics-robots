@@ -1,0 +1,50 @@
+# Everything the site says about the course lives here. Edit this file, not the pages.
+# Lines marked PLACEHOLDER are waiting for the real details.
+
+code: "25PC1RA204"
+title: "Kinematics and Dynamics of Robots"
+programme: "B.Tech. — Computer Science and Engineering (Robotics & Artificial Intelligence)"
+semester: "IV Semester"
+regulation: "R25"
+academic_year: "2026–27"
+
+# Hours per week. The home page lists only the non-zero ones, so the same
+# layout works for a theory course (lecture, tutorial) and a lab (practical).
+teaching_scheme:
+  lecture: 3
+  tutorial: 0
+  practical: 0
+  credits: 3
+
+# One line per section or batch, printed as written.
+timings:
+  - "To be announced"   # PLACEHOLDER
+venue: "To be announced"   # PLACEHOLDER
+
+# Each component is a row in the Assessment table; the total is added up for you.
+# Labels are the expansions printed in the R25 syllabus legend.
+evaluation:
+  - key: "SE"
+    label: "Sessional Examination"
+    marks: 30
+  - key: "CA"
+    label: "Class Assessment"
+    marks: 5
+  - key: "ELA"
+    label: "Experiential Learning Assessment"
+    marks: 5
+  - key: "SEE"
+    label: "Semester End Examination"
+    marks: 60
+
+prerequisites: ""   # PLACEHOLDER — not in the syllabus; the row is hidden while this is blank
+
+# `role` renders under the name only when it is non-empty.
+instructors:
+  - name: "Harshvardhan Uppaluru"   # PLACEHOLDER — confirm, and add co-instructors below
+    role: ""
+    url: "https://uhvardhan.github.io"
+    email: ""
+    photo: "/assets/images/harshvardhan-uppaluru.jpg"
+
+teaching_assistants: []

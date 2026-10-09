@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{%- comment -%}
+  hide_title: true drops the <h1> for a page whose nav tab already names it.
+  eyebrow and lede are independent, so a page can keep its label and lose the
+  heading. The block itself is skipped when nothing would be left inside it.
+  `title` is still used for <title> and the nav either way.
+{%- endcomment -%}
+{%- if page.eyebrow or page.lede or page.hide_title != true -%}
+<div class="page-head{% if page.hide_title %} page-head--label{% endif %}">
+  {%- if page.eyebrow -%}<p class="eyebrow">{{ page.eyebrow }}</p>{%- endif -%}
+  {%- unless page.hide_title -%}<h1>{{ page.title }}</h1>{%- endunless -%}
+  {%- if page.lede -%}<p class="lede">{{ page.lede }}</p>{%- endif -%}
+</div>
+{%- endif -%}
+
+<div class="prose">
+  {{ content }}
+</div>

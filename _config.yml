@@ -1,0 +1,35 @@
+# ─── Site identity ────────────────────────────────────────────────────────────
+title: "Kinematics and Dynamics of Robots"
+tagline: "Winter 2026/Spring 2027 (December – April)"
+description: >-
+  Course website for Kinematics and Dynamics of Robots (25PC1RA204),
+  B.Tech. CSE (Robotics & Artificial Intelligence), VNR VJIET.
+
+# EDIT if you name the repository something other than kinematics-dynamics-robots.
+url: "https://uhvardhan.github.io"
+baseurl: "/kinematics-dynamics-robots"
+
+# ─── Institute block (masthead + footer) ──────────────────────────────────────
+institute:
+  name: "VNR Vignana Jyothi Institute of Engineering and Technology"
+  short: "VNR VJIET"
+  url: "https://www.vnrvjiet.ac.in"
+  # Official VNR VJIET emblem (vector). Natural aspect ratio is 120:81.
+  logo: "/assets/images/vnrvjiet-logo.svg"
+  department: "Department of Computer Science and Engineering (AIML, IoT & RAI)"
+  address: "Bachupally, Hyderabad, Telangana — 500090"
+
+# ─── Build ────────────────────────────────────────────────────────────────────
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - assets/files/README.md
+  - assets/images/README.md
+  - vendor
+  - .jekyll-cache

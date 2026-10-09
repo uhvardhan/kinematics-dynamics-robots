@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {%- include masthead.html -%}
+  {%- include nav.html -%}
+  {%- comment -%}wide: true lets a page run past the 960px wrap — the schedule table needs it.{%- endcomment -%}
+  <main id="main" class="wrap main{% if page.wide %} main--wide{% endif %}">
+    {{ content }}
+  </main>
+  {%- include footer.html -%}
+</body>
+</html>

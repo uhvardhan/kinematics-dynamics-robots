@@ -1,0 +1,629 @@
+# One entry per week, with its sessions in teaching order. Each session is one
+# row on the Schedule page; the week number and dates span that week's rows.
+# Generated from the Teaching Plan 2026–27 — edit freely from here on.
+#
+#   week       — week number.
+#   dates      — printed under the week number, one per line (here, the week's span).
+#   sessions   — one row each:
+#     id         — C01–C45 are the core hours, R1–R3 the conditional reviews in
+#                  Week 10. "No class" marks the Sessional Examination I days.
+#     date       — the class date, once the timetable is out. The Date column
+#                  appears as soon as any session has one.
+#     topic      — printed as written.
+#     unit       — syllabus unit. "" prints an em dash.
+#     reading    — Niku section numbers. "" prints an em dash.
+#     files      — lecture notes, slides or scripts, as {name, url}. The Files
+#                  column appears as soon as any session has one.
+#     resources  — the Additional resources column, as {name, url}.
+#
+# The labels used in resources (Saha, Spong, RA/FDP, RA/Planar, RA/Tutorial, MR)
+# are explained in _data/schedule_key.yml, which prints under the table.
+#
+# A url starting with "/" resolves against the site:
+#
+#   files:
+#     - name: "Lecture notes (PDF)"
+#       url: "/assets/files/C01%20-%20Robots%20as%20mechanisms.pdf"
+#
+# Write a space in a file name as %20 and an & as %26. An external link (https://…)
+# is used as written. A week with no dates and no sessions is left off the page.
+
+- week: 1
+  dates: ["Dec 7–13, 2026"]
+  sessions:
+    - id: "C01"
+      date: ""
+      topic: "Robots as mechanisms. Identify links, joints, degrees of freedom, and the reference frame in a simple serial robot."
+      unit: "I"
+      reading: "§§1.8–1.9, 2.1–2.3"
+      files: []
+      resources:
+        - name: "RA/FDP 1–3: robot motion and freedom"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Saha: introductory robot mechanics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C02"
+      date: ""
+      topic: "Matrix representation of a point and a vector in three-dimensional space. Practice vector components, dot products, cross products, and matrix multiplication."
+      unit: "I"
+      reading: "§2.4"
+      files: []
+      resources:
+        - name: "Saha: Mathematical Fundamentals"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+        - name: "Spong: Linear Algebra appendix"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+    - id: "C03"
+      date: ""
+      topic: "Represent a frame at the origin of a fixed reference frame. Build its orientation matrix from axis directions and direction cosines."
+      unit: "I"
+      reading: "§2.4"
+      files: []
+      resources:
+        - name: "RA/FDP 4: representing orientation"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Spong: Rigid Motions and Homogeneous Transformations"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+
+- week: 2
+  dates: ["Dec 14–20, 2026"]
+  sessions:
+    - id: "C04"
+      date: ""
+      topic: "Represent a frame relative to a fixed reference frame. Combine its origin and orientation to describe the pose of a rigid body."
+      unit: "I"
+      reading: "§2.4"
+      files: []
+      resources:
+        - name: "Saha: Transformations"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+        - name: "RA/FDP 9: local and global frames"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+    - id: "C05"
+      date: ""
+      topic: "Form a homogeneous transformation matrix. Identify its rotation and translation blocks and use it to transform a point between frames."
+      unit: "I"
+      reading: "§§2.4–2.5"
+      files: []
+      resources:
+        - name: "MR: homogeneous transformations"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-3-1-homogeneous-transformation-matrices/"
+    - id: "C06"
+      date: ""
+      topic: "Represent pure translation with an HTM. Solve point-displacement and frame-displacement examples with stated reference frames."
+      unit: "I"
+      reading: "§2.6"
+      files: []
+      resources:
+        - name: "RA/FDP 5: translation demonstration"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Saha: Transformations"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+
+- week: 3
+  dates: ["Dec 21–27, 2026"]
+  sessions:
+    - id: "C07"
+      date: ""
+      topic: "Derive pure rotations about the x, y, and z axes. Apply the right-hand rule and calculate the rotated coordinates of a point."
+      unit: "I"
+      reading: "§2.6"
+      files: []
+      resources:
+        - name: "RA/FDP 6–7: rotations about coordinate axes"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+    - id: "C08"
+      date: ""
+      topic: "Compose rotations and translations. Compare operations relative to fixed and moving frames and show how transformation order changes the result."
+      unit: "I"
+      reading: "§2.6"
+      files: []
+      resources:
+        - name: "RA/FDP 8–9: order and reference frames"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Spong: Rigid Motions and Homogeneous Transformations"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+    - id: "C09"
+      date: ""
+      topic: "Derive the inverse of a transformation matrix. Solve a frame-conversion problem and make sure that the forward and inverse transformations recover the original point."
+      unit: "I"
+      reading: "§§2.5–2.7"
+      files: []
+      resources:
+        - name: "MR: homogeneous transformations"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-3-1-homogeneous-transformation-matrices/"
+        - name: "Saha: Transformations"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+
+- week: 4
+  dates: ["Dec 28, 2026–Jan 3, 2027"]
+  sessions:
+    - id: "C10"
+      date: ""
+      topic: "Introduce forward kinematics. Write position equations for a simple planar chain and identify the known joint values and unknown tool position."
+      unit: "II"
+      reading: "§§2.8–2.9"
+      files: []
+      resources:
+        - name: "RA/FDP 14: FK concepts"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "RA/Planar 2: two-link FK"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+    - id: "C11"
+      date: ""
+      topic: "Write forward kinematic equations for orientation. Combine position and orientation in the base-to-tool transformation."
+      unit: "II"
+      reading: "§§2.10–2.11"
+      files: []
+      resources:
+        - name: "Spong: Forward and Inverse Kinematics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "RA/Planar 4: three-link FK"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+    - id: "C12"
+      date: ""
+      topic: "Describe links and revolute or prismatic joints. Define the classic D-H parameters a, α, d, and θ and identify the joint variable."
+      unit: "II"
+      reading: "§2.12"
+      files: []
+      resources:
+        - name: "RA/FDP 10–11: D-H geometry"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+
+- week: 5
+  dates: ["Jan 4–10, 2027"]
+  sessions:
+    - id: "C13"
+      date: ""
+      topic: "Assign classic D-H coordinate frames. Handle intersecting and parallel joint axes and prepare a parameter table for a short serial chain."
+      unit: "II"
+      reading: "§2.12"
+      files: []
+      resources:
+        - name: "RA/FDP 12: spatial frame assignment"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Spong: Forward and Inverse Kinematics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+    - id: "C14"
+      date: ""
+      topic: "Derive the classic D-H link transformation from its four elementary operations. Multiply successive link transformations to obtain the base-to-tool matrix."
+      unit: "II"
+      reading: "§2.12"
+      files: []
+      resources:
+        - name: "Spong: Forward and Inverse Kinematics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "RA/Tutorial: D-H visualization"
+          url: "https://www.roboanalyzer.com/tutorials.html"
+    - id: "C15"
+      date: ""
+      topic: "Derive FK for a three-joint articulated robot. Construct its D-H table and calculate the tool pose for given joint angles."
+      unit: "II"
+      reading: "§§2.11–2.12"
+      files: []
+      resources:
+        - name: "RA/FDP 12–13: articulated-chain model"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+
+- week: 6
+  dates: ["Jan 11–17, 2027"]
+  sessions:
+    - id: "C16"
+      date: ""
+      topic: "Derive FK for a SCARA robot. Use its D-H table to calculate horizontal position, vertical motion, and tool orientation."
+      unit: "II"
+      reading: "§2.12"
+      files: []
+      resources:
+        - name: "Spong: Forward and Inverse Kinematics, SCARA example"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "RA/Tutorial: FK demonstration"
+          url: "https://www.roboanalyzer.com/tutorials.html"
+    - id: "C17"
+      date: ""
+      topic: "Derive FK for a cylindrical robot. Relate rotary and prismatic joint variables to tool position and orientation."
+      unit: "II"
+      reading: "§§2.9, 2.12"
+      files: []
+      resources:
+        - name: "Spong: Forward and Inverse Kinematics, cylindrical example"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C18"
+      date: ""
+      topic: "Solve and compare articulated, SCARA, and cylindrical FK problems. Make sure that each D-H table, zero configuration, and calculated pose agree."
+      unit: "II"
+      reading: "§§2.11–2.12"
+      files: []
+      resources:
+        - name: "RA/Tutorial: FK demonstration"
+          url: "https://www.roboanalyzer.com/tutorials.html"
+        - name: "Spong: Forward and Inverse Kinematics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+
+- week: 7
+  dates: ["Jan 18–24, 2027"]
+  sessions:
+    - id: "C19"
+      date: ""
+      topic: "Introduce the inverse kinematic problem and workspace analysis. Distinguish reachable and dexterous workspace and identify targets outside a two-link workspace."
+      unit: "III, first half"
+      reading: "§§1.14, 2.8, 2.13"
+      files: []
+      resources:
+        - name: "MR: task space and workspace"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-5-task-space-and-workspace/"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C20"
+      date: ""
+      topic: "Solve planar two-link IK by algebraic elimination. Recover joint angles with atan2 and retain both elbow branches where they exist."
+      unit: "III, first half"
+      reading: "§§2.9, 2.13"
+      files: []
+      resources:
+        - name: "RA/Planar 6: two-link inverse solution"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Spong: Forward and Inverse Kinematics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+    - id: "C21"
+      date: ""
+      topic: "Solve the same two-link IK problem geometrically. Compare triangle geometry with algebraic equations and interpret the solution branches."
+      unit: "III, first half"
+      reading: "§§2.9, 2.13"
+      files: []
+      resources:
+        - name: "RA/Planar 6: two-link inverse solution"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+
+- week: 8
+  dates: ["Jan 25–31, 2027"]
+  sessions:
+    - id: "C22"
+      date: ""
+      topic: "Solve three-DOF planar IK for a specified position and orientation. Reduce a 3R problem to a two-link position problem plus the final joint angle."
+      unit: "III, first half"
+      reading: "§§2.9–2.11, 2.13"
+      files: []
+      resources:
+        - name: "RA/Planar 8: three-link inverse solution"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Spong: Forward and Inverse Kinematics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+    - id: "C23"
+      date: ""
+      topic: "Solve the position problem for a three-DOF spatial articulated arm. Apply algebraic and geometric methods and interpret workspace boundaries. Finish the first half of Unit III."
+      unit: "III, first half"
+      reading: "§2.13"
+      files: []
+      resources:
+        - name: "RA/FDP 17: planar and wrist-partitioned IK"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Spong: Forward and Inverse Kinematics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+    - id: "C24"
+      date: ""
+      topic: "Review the examination portion. Solve one transformation problem, one classic D-H FK problem, and one three-DOF IK problem."
+      unit: "I, II, III first half: review"
+      reading: "§§2.4–2.13"
+      files: []
+      resources:
+        - name: "Saha: Transformations and Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+        - name: "RA/Planar 8: three-link inverse solution"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+
+- week: 9
+  dates: ["Feb 1–7, 2027"]
+  sessions:
+    - id: "No class"
+      date: ""
+      topic: "Sessional Examination I. No teaching hours are assigned."
+      unit: ""
+      reading: ""
+      files: []
+      resources: []
+
+- week: 10
+  dates: ["Feb 8–14, 2027"]
+  sessions:
+    - id: "No class"
+      date: ""
+      topic: "Sessional Examination I continues through February 9. The review slots below apply only to available classes from February 10 onward."
+      unit: ""
+      reading: ""
+      files: []
+      resources: []
+    - id: "R1"
+      date: ""
+      topic: "Conditional review after February 9: discuss examination difficulties in frame descriptions and transformations. Omit this slot if the timetable provides no class."
+      unit: "I: review"
+      reading: "§§2.4–2.7"
+      files: []
+      resources:
+        - name: "MR: homogeneous transformations"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-3-1-homogeneous-transformation-matrices/"
+    - id: "R2"
+      date: ""
+      topic: "Conditional review after February 9: correct D-H tables and compare calculated FK with a RoboAnalyzer model. Omit this slot if unavailable."
+      unit: "II: review"
+      reading: "§§2.11–2.12"
+      files: []
+      resources:
+        - name: "RA/Tutorial: FK demonstration"
+          url: "https://www.roboanalyzer.com/tutorials.html"
+    - id: "R3"
+      date: ""
+      topic: "Conditional review after February 9: revisit analytical IK branches and workspace boundaries. Omit this slot if unavailable."
+      unit: "III first half: review"
+      reading: "§§2.9, 2.13"
+      files: []
+      resources:
+        - name: "RA/Planar 6 and 8: planar inverse solutions"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+
+- week: 11
+  dates: ["Feb 15–21, 2027"]
+  sessions:
+    - id: "C25"
+      date: ""
+      topic: "Analyze IK solvability, degeneracy, and dexterity. Compare absent, single, multiple, and non-isolated solution sets with geometric examples."
+      unit: "III, second half"
+      reading: "§§2.13, 2.16"
+      files: []
+      resources:
+        - name: "Spong: Forward and Inverse Kinematics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C26"
+      date: ""
+      topic: "Introduce six-DOF spatial IK for an arm with a spherical wrist. Separate arm positioning from wrist orientation and solve for the wrist center."
+      unit: "III, second half"
+      reading: "§2.13"
+      files: []
+      resources:
+        - name: "RA/FDP 17: wrist-partitioned IK"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Spong: Forward and Inverse Kinematics, kinematic decoupling"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+    - id: "C27"
+      date: ""
+      topic: "Complete the six-DOF solution through inverse orientation. Assemble arm and wrist branches, apply joint limits, and substitute a selected solution into FK."
+      unit: "III, second half"
+      reading: "§§2.10–2.11, 2.13"
+      files: []
+      resources:
+        - name: "Spong: Forward and Inverse Kinematics, inverse orientation"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "RA/Tutorial: IK demonstration"
+          url: "https://www.roboanalyzer.com/tutorials.html"
+
+- week: 12
+  dates: ["Feb 22–28, 2027"]
+  sessions:
+    - id: "C28"
+      date: ""
+      topic: "Program analytical IK for a three-DOF planar robot. Handle angle quadrants, unreachable targets, and branch selection, then compare the resulting FK pose with the target."
+      unit: "III, second half"
+      reading: "§2.14"
+      files: []
+      resources:
+        - name: "RA/Planar 9: three-link IK program"
+          url: "https://www.roboanalyzer.com/video-lectures.html"
+        - name: "Saha: Kinematics and Use of Software"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C29"
+      date: ""
+      topic: "Study the fundamental problem with D-H representation in IK. Discuss its implications for solving inverse equations and compare D-H and direct geometric reasoning."
+      unit: "III, second half"
+      reading: "§§2.13, 2.17"
+      files: []
+      resources:
+        - name: "Spong: Forward and Inverse Kinematics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C30"
+      date: ""
+      topic: "Introduce differential relationships and the Jacobian, the matrix relating joint rates to tool velocity. Derive the planar velocity relation and distinguish small changes from finite motion."
+      unit: "IV"
+      reading: "§§5.1–5.4"
+      files: []
+      resources:
+        - name: "MR: velocity kinematics"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/velocity-kinematics-and-statics/"
+        - name: "Spong: Velocity Kinematics—The Jacobian"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+
+- week: 13
+  dates: ["Mar 1–7, 2027"]
+  sessions:
+    - id: "C31"
+      date: ""
+      topic: "Distinguish differential motion of a frame from motion generated by robot joints. Construct the differential operator for small translations and rotations."
+      unit: "IV"
+      reading: "§§5.5–5.6"
+      files: []
+      resources:
+        - name: "Spong: Velocity Kinematics—The Jacobian"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C32"
+      date: ""
+      topic: "Interpret differential changes in position and orientation. Express those changes between frames and apply them to a robot hand frame."
+      unit: "IV"
+      reading: "§§5.7–5.9"
+      files: []
+      resources:
+        - name: "Spong: Velocity Kinematics—The Jacobian"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C33"
+      date: ""
+      topic: "Calculate a serial-manipulator Jacobian. Derive revolute and prismatic joint columns and work through a planar example."
+      unit: "IV"
+      reading: "§5.10"
+      files: []
+      resources:
+        - name: "Spong: Velocity Kinematics—The Jacobian"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "MR: velocity kinematics"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/velocity-kinematics-and-statics/"
+
+- week: 14
+  dates: ["Mar 8–14, 2027"]
+  sessions:
+    - id: "C34"
+      date: ""
+      topic: "Calculate the Jacobian for a SCARA or articulated robot. Compare predicted tool velocity with the change produced by small joint increments."
+      unit: "IV"
+      reading: "§§5.9–5.10"
+      files: []
+      resources:
+        - name: "Spong: Velocity Kinematics—The Jacobian"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C35"
+      date: ""
+      topic: "Relate the Jacobian to the differential operator. Obtain a tool-frame differential change from joint increments with consistent frame notation."
+      unit: "IV"
+      reading: "§5.11"
+      files: []
+      resources:
+        - name: "Spong: Velocity Kinematics—The Jacobian"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "Saha: Kinematics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C36"
+      date: ""
+      topic: "Analyze singularities through loss of Jacobian rank. For a robot with a spherical wrist, decouple arm and wrist singularities and interpret the lost motion directions."
+      unit: "IV"
+      reading: "§§5.3, 5.12. Use Spong for the arm/wrist decoupling treatment."
+      files: []
+      resources:
+        - name: "Spong: Velocity Kinematics—The Jacobian, singularity analysis"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "MR: singularities"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-3-singularities/"
+
+- week: 15
+  dates: ["Mar 15–21, 2027"]
+  sessions:
+    - id: "C37"
+      date: ""
+      topic: "Apply the inverse Jacobian to a desired tool velocity. Solve a numerical example and explain why a square, nonsingular Jacobian is required for an ordinary inverse."
+      unit: "IV"
+      reading: "§5.12"
+      files: []
+      resources:
+        - name: "Spong: Velocity Kinematics—The Jacobian"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "MR: singularities"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-3-singularities/"
+    - id: "C38"
+      date: ""
+      topic: "Introduce energy-based dynamics and compare it with Newtonian force balance. Form the Lagrangian as kinetic minus potential energy and derive a one-DOF equation."
+      unit: "V"
+      reading: "§§6.1–6.2"
+      files: []
+      resources:
+        - name: "Spong: Dynamics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "MR: Lagrangian dynamics, part 1"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/chapter-8-1-lagrangian-formulation-of-dynamics-part-1-of-2/"
+    - id: "C39"
+      date: ""
+      topic: "Form kinetic and potential energies for robot links. Calculate center-of-mass velocities and prepare the energy expressions for a two-DOF example."
+      unit: "V"
+      reading: "§§6.2, 6.4"
+      files: []
+      resources:
+        - name: "Spong: Dynamics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "MR: Lagrangian dynamics, part 2"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-1-lagrangian-formulation-of-dynamics-part-2-of-2/"
+
+- week: 16
+  dates: ["Mar 22–28, 2027"]
+  sessions:
+    - id: "C40"
+      date: ""
+      topic: "Calculate effective moments of inertia. Include link, payload, and reflected actuator contributions in a worked joint example."
+      unit: "V"
+      reading: "§6.3"
+      files: []
+      resources:
+        - name: "Saha: Dynamics"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+        - name: "Spong: Dynamics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+    - id: "C41"
+      date: ""
+      topic: "Apply the Euler–Lagrange equations to the two-DOF energy model. Derive the joint equations and identify inertia, velocity-dependent, and gravity terms."
+      unit: "V"
+      reading: "§§6.2, 6.4"
+      files: []
+      resources:
+        - name: "Spong: Dynamics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+        - name: "MR: Lagrangian dynamics, part 2"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-1-lagrangian-formulation-of-dynamics-part-2-of-2/"
+    - id: "C42"
+      date: ""
+      topic: "Extend the dynamic model to multiple DOF. Assemble the matrix equation and calculate joint effort for a specified state and acceleration."
+      unit: "V"
+      reading: "§6.4"
+      files: []
+      resources:
+        - name: "MR: interpreting the mass matrix"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-1-3-understanding-the-mass-matrix/"
+        - name: "RA/Tutorial: inverse dynamics demonstration"
+          url: "https://www.roboanalyzer.com/tutorials.html"
+
+- week: 17
+  dates: ["Mar 29–Apr 3, 2027"]
+  sessions:
+    - id: "C43"
+      date: ""
+      topic: "Perform static force analysis with free-body diagrams and virtual work. Derive the Jacobian-transpose relation between tool force or moment and joint effort with stated sign conventions."
+      unit: "V"
+      reading: "§6.5"
+      files: []
+      resources:
+        - name: "MR: serial-chain statics"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-2-statics-of-open-chains/"
+        - name: "Saha: Statics and Manipulator Design"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C44"
+      date: ""
+      topic: "Transform forces and moments between coordinate frames. Account for both axis rotation and the moment caused by shifting the reference point."
+      unit: "V"
+      reading: "§6.6"
+      files: []
+      resources:
+        - name: "MR: combined force and moment representation"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-4-wrenches/"
+        - name: "Saha: Statics and Manipulator Design"
+          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+    - id: "C45"
+      date: ""
+      topic: "Solve an integrated static-load problem: transform the tool load, calculate joint effort, and include gravity consistently. Review its connection to the dynamic equations and close remaining questions."
+      unit: "V, with I and IV applied"
+      reading: "§§6.4–6.6"
+      files: []
+      resources:
+        - name: "MR: serial-chain statics"
+          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-2-statics-of-open-chains/"
+        - name: "Spong: Dynamics"
+          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"

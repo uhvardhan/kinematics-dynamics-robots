@@ -1,0 +1,124 @@
+---
+layout: default
+---
+{%- assign c = site.data.course -%}
+{%- assign s = c.teaching_scheme -%}
+
+<section class="section section--notice">
+  <h2 class="section__title section__title--lead">Updates</h2>
+  <ol class="updates">
+    {%- for u in site.data.updates -%}
+    <li class="update">
+      <p class="update__date">{{ u.date }}</p>
+      {%- capture hrefbase %}href="{{ site.baseurl }}/{% endcapture -%}
+      <div class="update__body">{{ u.body | markdownify | replace: 'href="/', hrefbase }}</div>
+    </li>
+    {%- endfor -%}
+  </ol>
+</section>
+
+<section class="section">
+  <h2 class="section__title section__title--lead">Course Description</h2>
+  <div class="prose">
+    {{ content }}
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section__title section__title--lead">Course Schedule</h2>
+  <dl class="specs">
+    <div class="specs__row">
+      <dt>Sessions</dt>
+      <dd>
+        <ul class="bare">
+          {%- for t in c.timings -%}<li>{{ t }}</li>{%- endfor -%}
+        </ul>
+      </dd>
+    </div>
+    <div class="specs__row">
+      <dt>Venue</dt>
+      <dd>{{ c.venue }}</dd>
+    </div>
+    {%- comment -%}
+      Only the non-zero parts of the scheme are listed, so the same layout
+      serves a theory course (lecture, tutorial) and a lab (practical).
+    {%- endcomment -%}
+    <div class="specs__row">
+      <dt>Scheme</dt>
+      <dd>
+        <ul class="bare">
+          {%- if s.lecture and s.lecture > 0 -%}<li>Lecture — {{ s.lecture }} hour{% if s.lecture != 1 %}s{% endif %} per week</li>{%- endif -%}
+          {%- if s.tutorial and s.tutorial > 0 -%}<li>Tutorial — {{ s.tutorial }} hour{% if s.tutorial != 1 %}s{% endif %} per week</li>{%- endif -%}
+          {%- if s.practical and s.practical > 0 -%}<li>Practical — {{ s.practical }} hour{% if s.practical != 1 %}s{% endif %} per week per student</li>{%- endif -%}
+        </ul>
+      </dd>
+    </div>
+    <div class="specs__row">
+      <dt>Credits</dt>
+      <dd>{{ s.credits }}</dd>
+    </div>
+    {%- if c.prerequisites and c.prerequisites != "" %}
+    <div class="specs__row">
+      <dt>Prerequisites</dt>
+      <dd>{{ c.prerequisites }}</dd>
+    </div>
+    {%- endif %}
+  </dl>
+</section>
+
+<section class="section">
+  <h2 class="section__title section__title--lead">Assessment</h2>
+  {%- if c.evaluation and c.evaluation.size > 0 %}
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th class="t-num">Code</th><th>Component</th><th class="t-center">Marks</th></tr></thead>
+      <tbody>
+      {%- assign total = 0 -%}
+      {%- for e in c.evaluation -%}
+        {%- assign total = total | plus: e.marks -%}
+        <tr><td class="t-mono">{{ e.key }}</td><td>{{ e.label }}</td><td class="t-center t-mono">{{ e.marks }}</td></tr>
+      {%- endfor -%}
+        <tr><td></td><td class="t-title">Total</td><td class="t-center t-mono">{{ total }}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  {%- else %}
+  <div class="prose"><p>To be announced.</p></div>
+  {%- endif %}
+</section>
+
+<section class="section">
+  <h2 class="section__title section__title--lead">Instructors</h2>
+  <ul class="people">
+    {%- for p in c.instructors -%}
+    <li class="person">
+      {%- if p.photo and p.photo != "" -%}
+      <img class="person__photo" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">
+      {%- endif -%}
+      <div>
+        <p class="person__name">
+          {%- if p.url and p.url != "" -%}<a href="{{ p.url }}">{{ p.name }}</a>{%- else -%}{{ p.name }}{%- endif -%}
+        </p>
+        {%- if p.role and p.role != "" -%}<p class="person__role">{{ p.role }}</p>{%- endif -%}
+        {%- if p.email and p.email != "" -%}
+        <p class="person__role"><a href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+        {%- endif -%}
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  {%- if c.teaching_assistants.size > 0 -%}
+  <h2 class="section__title">Teaching assistants</h2>
+  <ul class="people">
+    {%- for p in c.teaching_assistants -%}
+    <li class="person">
+      <div>
+        <p class="person__name">{{ p.name }}</p>
+        <p class="person__role">{{ p.role }}</p>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</section>
