@@ -410,33 +410,33 @@ tbody tr:hover td { background: rgba(21, 29, 43, .022); }
 
 /* ── Schedule ─────────────────────────────────────────────────────────────── */
 
-/* One row per session. The week cell spans its sessions and a full-strength
-   rule closes each week, so the grouping reads before the detail does. The
-   min-width keeps the columns legible: narrower screens scroll the table
-   sideways, and phones get the stacked layout further down instead. */
-.schedule { min-width: 54rem; }
+/* One row per session. The Week and Date cells span the week's sessions and a
+   full-strength rule closes each week, so the grouping reads before the
+   detail does. The min-width keeps the columns legible: narrower screens
+   scroll the table sideways, and phones get the stacked layout further down
+   instead. Topic, Lecture Notes and Additional Resources share what is left. */
+.schedule { min-width: 60rem; }
 
-.schedule .t-week    { width: 7.5rem; }
-.schedule .t-date    { width: 6.5rem; }
-.schedule .t-session { width: 5rem; }
-.schedule .t-unit    { width: 7rem; }
-.schedule .t-reading { width: 10rem; }
-.schedule .t-files   { width: 10rem; }
-.schedule .t-res     { width: 16rem; }
+.schedule .t-week    { width: 3.5rem; }
+.schedule .t-date    { width: 8.25rem; }
+.schedule .t-session { width: 4.75rem; }
+.schedule .t-unit    { width: 6.5rem; }
+.schedule .t-notes   { width: 7.5rem; }
+.schedule .t-reading { width: 9.25rem; }
+.schedule .t-res     { width: 13rem; }
 
 .schedule td.t-week,
+.schedule td.t-date--week,
 .schedule tr.is-week-end td { border-bottom-color: var(--rule); }
 
 .t-week__num {
-  display: block;
   font-family: var(--font-mono);
   font-size: .82rem;
   color: var(--ink);
 }
-.t-week__dates {
-  margin-top: .2rem;
+.schedule td.t-date {
   font-family: var(--font-mono);
-  font-size: .74rem;
+  font-size: .76rem;
   line-height: 1.5;
   color: var(--ink-3);
 }
@@ -459,7 +459,8 @@ tbody tr:hover td { background: rgba(21, 29, 43, .022); }
 
 /* Phones: the table becomes a list. Each week opens with its number and dates,
    then every session stacks as a block: session and unit on one line, the
-   topic, then reading and resources under small labels. Empty cells drop out. */
+   topic, then lecture notes, reading and resources under small labels. Empty
+   cells drop out. */
 @media (max-width: 640px) {
   .schedule { display: block; min-width: 0; }
   .schedule thead { display: none; }
@@ -475,25 +476,27 @@ tbody tr:hover td { background: rgba(21, 29, 43, .022); }
   .schedule tr.is-week-end { border-bottom-color: var(--rule); }
   .schedule td { display: block; flex: 1 1 100%; padding: 0; border: 0; }
   .schedule .t-week, .schedule .t-date, .schedule .t-session, .schedule .t-unit,
-  .schedule .t-reading, .schedule .t-files, .schedule .t-res { width: auto; }
+  .schedule .t-notes, .schedule .t-reading, .schedule .t-res { width: auto; }
   .schedule td.is-empty { display: none; }
   .schedule tbody tr:hover td { background: none; }
 
-  .schedule td.t-week {
-    order: -1;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0 .75rem;
+  .schedule td.t-date, .schedule td.t-session { flex: 0 0 auto; }
+
+  /* Week line: "Week 1  Dec 7–13, 2026", ruled off from the sessions below.
+     The empty ::after item forces the first session onto a new line. */
+  .schedule td.t-week, .schedule td.t-date--week {
+    order: -2;
+    flex: 0 0 auto;
     padding-bottom: .6rem;
     margin-bottom: .25rem;
     border-bottom: 1px solid var(--rule-soft);
   }
+  /* Pulled back over the flex gap so the rule under the week line runs unbroken. */
+  .schedule td.t-date--week { order: -1; flex: 1 1 auto; margin-left: -.85rem; padding-left: .85rem; }
+  .schedule tr.is-week-start::after { content: ""; order: -1; flex: 0 0 100%; }
   .t-week__num { font-weight: 600; }
   .t-week__num::before { content: "Week "; }
-  .t-week__dates { margin-top: 0; }
 
-  .schedule td.t-date, .schedule td.t-session { flex: 0 0 auto; }
   .schedule td.t-unit {
     flex: 1 1 auto;
     font-family: var(--font-mono);
@@ -502,8 +505,8 @@ tbody tr:hover td { background: rgba(21, 29, 43, .022); }
   }
   .schedule td.t-unit::before { content: "Unit "; }
   .schedule td.t-topic { order: 1; }
-  .schedule td.t-reading { order: 2; }
-  .schedule td.t-files { order: 3; }
+  .schedule td.t-notes { order: 2; }
+  .schedule td.t-reading { order: 3; }
   .schedule td.t-res { order: 4; }
   .schedule td[data-label]::before {
     content: attr(data-label);

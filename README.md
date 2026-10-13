@@ -52,7 +52,8 @@ In normal use you edit YAML and `index.md`, not markup.
       prerequisites and instructors in `_data/course.yml`.
 - [ ] Read over the course description in `index.md`, drafted from the R25 syllabus.
 - [ ] Once the timetable is out, give each session its `date` in `_data/schedule.yml`.
-      The Date column appears on the Schedule page as soon as one session has a date.
+      In any week where a session has a date, the Date column shows each session's
+      date instead of the week's span.
 - [ ] Set the date on the welcome entry in `_data/updates.yml` to the day the site goes live.
 
 ## Theory or lab
@@ -65,26 +66,26 @@ course or a laboratory. The heading of the schedule's Topic column is in `schedu
 
 `_data/schedule.yml` was generated from the Teaching Plan 2026–27: one entry per week,
 each with its sessions (C01–C45, the conditional reviews R1–R3, and the "No class" rows
-for Sessional Examination I). Each session is a row on the Schedule page, and the week
-number and dates span that week's rows. On phones the table turns into a list, one
-block per session.
+for Sessional Examination I). Each session is a row on the Schedule page, with the
+columns Week, Date, Session, Unit, Topic, Lecture Notes, Reading and Additional
+Resources. The Week and Date cells span that week's rows. On phones the table turns
+into a list, one block per session.
 
 ## Adding lecture notes or other files
 
-Drop the file in `assets/files/`, then list it under the session's `files` in
+Drop the file in `assets/files/`, then list it under the session's `notes` in
 `_data/schedule.yml`:
 
 ```yaml
     - id: "C01"
       ...
-      files:
+      notes:
         - name: "Lecture notes (PDF)"
           url: "/assets/files/C01%20-%20Robots%20as%20mechanisms.pdf"
 ```
 
-`files` fills the Files column, which appears once any session has a file;
-`resources` fills Additional resources. Write a space in a file name as `%20` and an
-`&` as `%26`.
+`notes` fills the Lecture Notes column and `resources` fills Additional Resources.
+Write a space in a file name as `%20` and an `&` as `%26`.
 
 ## Adding an update
 
