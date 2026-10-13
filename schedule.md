@@ -32,8 +32,6 @@ wide: true
 {% if weeks.size == 0 %}
 <p class="narrow">The week-by-week schedule will be posted before classes begin.</p>
 {% else %}
-<p class="schedule-intro">Readings are section numbers in Niku, <em>Introduction to Robotics</em>, 3rd edition. Session labels, resource labels and abbreviations are explained in the <a href="#key">key below the table</a>.</p>
-
 <div class="table-scroll" markdown="0">
 <table class="schedule">
   <thead>

@@ -443,12 +443,10 @@ tbody tr:hover td { background: rgba(21, 29, 43, .022); }
 
 .schedule td.t-topic { color: var(--ink); }
 
-.schedule-intro { font-size: .93rem; }
-
 /* The key and abbreviations under the table keep to a readable measure, flush
    left with the table rather than centred under it. */
 .schedule-key { max-width: 60rem; margin-top: 3rem; }
-/* The "key below the table" link lands here; clear the sticky nav. */
+/* A link to #key lands here; clear the sticky nav. */
 .schedule-key { scroll-margin-top: 4rem; }
 .schedule-key .section__title { margin-top: 2.5rem; }
 .schedule-key .section__title:first-child { margin-top: 0; }
