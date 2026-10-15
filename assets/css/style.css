@@ -414,7 +414,7 @@ tbody tr:hover td { background: rgba(21, 29, 43, .022); }
    full-strength rule closes each week, so the grouping reads before the
    detail does. The min-width keeps the columns legible: narrower screens
    scroll the table sideways, and phones get the stacked layout further down
-   instead. Topic, Lecture Notes and Additional Resources share what is left. */
+   instead. Topic takes what is left; its entries are short titles. */
 .schedule { min-width: 60rem; }
 
 .schedule .t-week    { width: 3.5rem; }
@@ -423,7 +423,7 @@ tbody tr:hover td { background: rgba(21, 29, 43, .022); }
 .schedule .t-unit    { width: 6.5rem; }
 .schedule .t-notes   { width: 7.5rem; }
 .schedule .t-reading { width: 9.25rem; }
-.schedule .t-res     { width: 13rem; }
+.schedule .t-res     { width: 18rem; }
 
 .schedule td.t-week,
 .schedule td.t-date--week,

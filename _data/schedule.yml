@@ -36,7 +36,7 @@
     - id: "C01"
       date: ""
       unit: "I"
-      topic: "Robots as mechanisms. Identify links, joints, degrees of freedom, and the reference frame in a simple serial robot."
+      topic: "Robots as mechanisms"
       notes: []
       reading: "§§1.8–1.9, 2.1–2.3"
       resources:
@@ -47,7 +47,7 @@
     - id: "C02"
       date: ""
       unit: "I"
-      topic: "Matrix representation of a point and a vector in three-dimensional space. Practice vector components, dot products, cross products, and matrix multiplication."
+      topic: "Points and vectors in space"
       notes: []
       reading: "§2.4"
       resources:
@@ -58,7 +58,7 @@
     - id: "C03"
       date: ""
       unit: "I"
-      topic: "Represent a frame at the origin of a fixed reference frame. Build its orientation matrix from axis directions and direction cosines."
+      topic: "Frame at the origin and orientation matrix"
       notes: []
       reading: "§2.4"
       resources:
@@ -73,7 +73,7 @@
     - id: "C04"
       date: ""
       unit: "I"
-      topic: "Represent a frame relative to a fixed reference frame. Combine its origin and orientation to describe the pose of a rigid body."
+      topic: "Relative frames and rigid-body pose"
       notes: []
       reading: "§2.4"
       resources:
@@ -84,7 +84,7 @@
     - id: "C05"
       date: ""
       unit: "I"
-      topic: "Form a homogeneous transformation matrix. Identify its rotation and translation blocks and use it to transform a point between frames."
+      topic: "Homogeneous transformation matrices"
       notes: []
       reading: "§§2.4–2.5"
       resources:
@@ -93,7 +93,7 @@
     - id: "C06"
       date: ""
       unit: "I"
-      topic: "Represent pure translation with an HTM. Solve point-displacement and frame-displacement examples with stated reference frames."
+      topic: "Pure translation"
       notes: []
       reading: "§2.6"
       resources:
@@ -108,7 +108,7 @@
     - id: "C07"
       date: ""
       unit: "I"
-      topic: "Derive pure rotations about the x, y, and z axes. Apply the right-hand rule and calculate the rotated coordinates of a point."
+      topic: "Pure rotation about the x, y and z axes"
       notes: []
       reading: "§2.6"
       resources:
@@ -117,7 +117,7 @@
     - id: "C08"
       date: ""
       unit: "I"
-      topic: "Compose rotations and translations. Compare operations relative to fixed and moving frames and show how transformation order changes the result."
+      topic: "Combined rotations and translations"
       notes: []
       reading: "§2.6"
       resources:
@@ -128,7 +128,7 @@
     - id: "C09"
       date: ""
       unit: "I"
-      topic: "Derive the inverse of a transformation matrix. Solve a frame-conversion problem and make sure that the forward and inverse transformations recover the original point."
+      topic: "Inverse of a transformation matrix"
       notes: []
       reading: "§§2.5–2.7"
       resources:
@@ -143,7 +143,7 @@
     - id: "C10"
       date: ""
       unit: "II"
-      topic: "Introduce forward kinematics. Write position equations for a simple planar chain and identify the known joint values and unknown tool position."
+      topic: "Introduction to forward kinematics"
       notes: []
       reading: "§§2.8–2.9"
       resources:
@@ -154,7 +154,7 @@
     - id: "C11"
       date: ""
       unit: "II"
-      topic: "Write forward kinematic equations for orientation. Combine position and orientation in the base-to-tool transformation."
+      topic: "Forward kinematics for orientation"
       notes: []
       reading: "§§2.10–2.11"
       resources:
@@ -165,7 +165,7 @@
     - id: "C12"
       date: ""
       unit: "II"
-      topic: "Describe links and revolute or prismatic joints. Define the classic D-H parameters a, α, d, and θ and identify the joint variable."
+      topic: "Links, joints and D-H parameters"
       notes: []
       reading: "§2.12"
       resources:
@@ -180,7 +180,7 @@
     - id: "C13"
       date: ""
       unit: "II"
-      topic: "Assign classic D-H coordinate frames. Handle intersecting and parallel joint axes and prepare a parameter table for a short serial chain."
+      topic: "Assigning D-H frames"
       notes: []
       reading: "§2.12"
       resources:
@@ -191,7 +191,7 @@
     - id: "C14"
       date: ""
       unit: "II"
-      topic: "Derive the classic D-H link transformation from its four elementary operations. Multiply successive link transformations to obtain the base-to-tool matrix."
+      topic: "The D-H link transformation"
       notes: []
       reading: "§2.12"
       resources:
@@ -202,7 +202,7 @@
     - id: "C15"
       date: ""
       unit: "II"
-      topic: "Derive FK for a three-joint articulated robot. Construct its D-H table and calculate the tool pose for given joint angles."
+      topic: "Forward kinematics: articulated robot"
       notes: []
       reading: "§§2.11–2.12"
       resources:
@@ -217,7 +217,7 @@
     - id: "C16"
       date: ""
       unit: "II"
-      topic: "Derive FK for a SCARA robot. Use its D-H table to calculate horizontal position, vertical motion, and tool orientation."
+      topic: "Forward kinematics: SCARA robot"
       notes: []
       reading: "§2.12"
       resources:
@@ -228,7 +228,7 @@
     - id: "C17"
       date: ""
       unit: "II"
-      topic: "Derive FK for a cylindrical robot. Relate rotary and prismatic joint variables to tool position and orientation."
+      topic: "Forward kinematics: cylindrical robot"
       notes: []
       reading: "§§2.9, 2.12"
       resources:
@@ -239,7 +239,7 @@
     - id: "C18"
       date: ""
       unit: "II"
-      topic: "Solve and compare articulated, SCARA, and cylindrical FK problems. Make sure that each D-H table, zero configuration, and calculated pose agree."
+      topic: "Forward kinematics: practice problems"
       notes: []
       reading: "§§2.11–2.12"
       resources:
@@ -254,7 +254,7 @@
     - id: "C19"
       date: ""
       unit: "III, first half"
-      topic: "Introduce the inverse kinematic problem and workspace analysis. Distinguish reachable and dexterous workspace and identify targets outside a two-link workspace."
+      topic: "The inverse kinematics problem and workspace"
       notes: []
       reading: "§§1.14, 2.8, 2.13"
       resources:
@@ -265,7 +265,7 @@
     - id: "C20"
       date: ""
       unit: "III, first half"
-      topic: "Solve planar two-link IK by algebraic elimination. Recover joint angles with atan2 and retain both elbow branches where they exist."
+      topic: "Two-link inverse kinematics: algebraic method"
       notes: []
       reading: "§§2.9, 2.13"
       resources:
@@ -276,7 +276,7 @@
     - id: "C21"
       date: ""
       unit: "III, first half"
-      topic: "Solve the same two-link IK problem geometrically. Compare triangle geometry with algebraic equations and interpret the solution branches."
+      topic: "Two-link inverse kinematics: geometric method"
       notes: []
       reading: "§§2.9, 2.13"
       resources:
@@ -291,7 +291,7 @@
     - id: "C22"
       date: ""
       unit: "III, first half"
-      topic: "Solve three-DOF planar IK for a specified position and orientation. Reduce a 3R problem to a two-link position problem plus the final joint angle."
+      topic: "Three-DOF planar inverse kinematics"
       notes: []
       reading: "§§2.9–2.11, 2.13"
       resources:
@@ -302,7 +302,7 @@
     - id: "C23"
       date: ""
       unit: "III, first half"
-      topic: "Solve the position problem for a three-DOF spatial articulated arm. Apply algebraic and geometric methods and interpret workspace boundaries. Finish the first half of Unit III."
+      topic: "Three-DOF spatial inverse kinematics"
       notes: []
       reading: "§2.13"
       resources:
@@ -313,7 +313,7 @@
     - id: "C24"
       date: ""
       unit: "I, II, III first half: review"
-      topic: "Review the examination portion. Solve one transformation problem, one classic D-H FK problem, and one three-DOF IK problem."
+      topic: "Review for Sessional Examination I"
       notes: []
       reading: "§§2.4–2.13"
       resources:
@@ -328,7 +328,7 @@
     - id: "No class"
       date: ""
       unit: ""
-      topic: "Sessional Examination I. No teaching hours are assigned."
+      topic: "Sessional Examination I"
       notes: []
       reading: ""
       resources: []
@@ -339,14 +339,14 @@
     - id: "No class"
       date: ""
       unit: ""
-      topic: "Sessional Examination I continues through February 9. The review slots below apply only to available classes from February 10 onward."
+      topic: "Sessional Examination I (until February 9)"
       notes: []
       reading: ""
       resources: []
     - id: "R1"
       date: ""
       unit: "I: review"
-      topic: "Conditional review after February 9: discuss examination difficulties in frame descriptions and transformations. Omit this slot if the timetable provides no class."
+      topic: "Review: frames and transformations"
       notes: []
       reading: "§§2.4–2.7"
       resources:
@@ -355,7 +355,7 @@
     - id: "R2"
       date: ""
       unit: "II: review"
-      topic: "Conditional review after February 9: correct D-H tables and compare calculated FK with a RoboAnalyzer model. Omit this slot if unavailable."
+      topic: "Review: D-H tables and forward kinematics"
       notes: []
       reading: "§§2.11–2.12"
       resources:
@@ -364,7 +364,7 @@
     - id: "R3"
       date: ""
       unit: "III first half: review"
-      topic: "Conditional review after February 9: revisit analytical IK branches and workspace boundaries. Omit this slot if unavailable."
+      topic: "Review: inverse kinematics branches and workspace"
       notes: []
       reading: "§§2.9, 2.13"
       resources:
@@ -377,7 +377,7 @@
     - id: "C25"
       date: ""
       unit: "III, second half"
-      topic: "Analyze IK solvability, degeneracy, and dexterity. Compare absent, single, multiple, and non-isolated solution sets with geometric examples."
+      topic: "Solvability, degeneracy and dexterity"
       notes: []
       reading: "§§2.13, 2.16"
       resources:
@@ -388,7 +388,7 @@
     - id: "C26"
       date: ""
       unit: "III, second half"
-      topic: "Introduce six-DOF spatial IK for an arm with a spherical wrist. Separate arm positioning from wrist orientation and solve for the wrist center."
+      topic: "Six-DOF inverse kinematics: wrist center"
       notes: []
       reading: "§2.13"
       resources:
@@ -399,7 +399,7 @@
     - id: "C27"
       date: ""
       unit: "III, second half"
-      topic: "Complete the six-DOF solution through inverse orientation. Assemble arm and wrist branches, apply joint limits, and substitute a selected solution into FK."
+      topic: "Six-DOF inverse kinematics: inverse orientation"
       notes: []
       reading: "§§2.10–2.11, 2.13"
       resources:
@@ -414,7 +414,7 @@
     - id: "C28"
       date: ""
       unit: "III, second half"
-      topic: "Program analytical IK for a three-DOF planar robot. Handle angle quadrants, unreachable targets, and branch selection, then compare the resulting FK pose with the target."
+      topic: "Programming inverse kinematics"
       notes: []
       reading: "§2.14"
       resources:
@@ -425,7 +425,7 @@
     - id: "C29"
       date: ""
       unit: "III, second half"
-      topic: "Study the fundamental problem with D-H representation in IK. Discuss its implications for solving inverse equations and compare D-H and direct geometric reasoning."
+      topic: "Limits of D-H representation in inverse kinematics"
       notes: []
       reading: "§§2.13, 2.17"
       resources:
@@ -436,7 +436,7 @@
     - id: "C30"
       date: ""
       unit: "IV"
-      topic: "Introduce differential relationships and the Jacobian, the matrix relating joint rates to tool velocity. Derive the planar velocity relation and distinguish small changes from finite motion."
+      topic: "Differential relationships and the Jacobian"
       notes: []
       reading: "§§5.1–5.4"
       resources:
@@ -451,7 +451,7 @@
     - id: "C31"
       date: ""
       unit: "IV"
-      topic: "Distinguish differential motion of a frame from motion generated by robot joints. Construct the differential operator for small translations and rotations."
+      topic: "Differential motion and the differential operator"
       notes: []
       reading: "§§5.5–5.6"
       resources:
@@ -462,7 +462,7 @@
     - id: "C32"
       date: ""
       unit: "IV"
-      topic: "Interpret differential changes in position and orientation. Express those changes between frames and apply them to a robot hand frame."
+      topic: "Interpreting differential changes"
       notes: []
       reading: "§§5.7–5.9"
       resources:
@@ -473,7 +473,7 @@
     - id: "C33"
       date: ""
       unit: "IV"
-      topic: "Calculate a serial-manipulator Jacobian. Derive revolute and prismatic joint columns and work through a planar example."
+      topic: "Calculating the Jacobian"
       notes: []
       reading: "§5.10"
       resources:
@@ -488,7 +488,7 @@
     - id: "C34"
       date: ""
       unit: "IV"
-      topic: "Calculate the Jacobian for a SCARA or articulated robot. Compare predicted tool velocity with the change produced by small joint increments."
+      topic: "Jacobian of a SCARA or articulated robot"
       notes: []
       reading: "§§5.9–5.10"
       resources:
@@ -499,7 +499,7 @@
     - id: "C35"
       date: ""
       unit: "IV"
-      topic: "Relate the Jacobian to the differential operator. Obtain a tool-frame differential change from joint increments with consistent frame notation."
+      topic: "The Jacobian and the differential operator"
       notes: []
       reading: "§5.11"
       resources:
@@ -510,7 +510,7 @@
     - id: "C36"
       date: ""
       unit: "IV"
-      topic: "Analyze singularities through loss of Jacobian rank. For a robot with a spherical wrist, decouple arm and wrist singularities and interpret the lost motion directions."
+      topic: "Singularity analysis"
       notes: []
       reading: "§§5.3, 5.12. Use Spong for the arm/wrist decoupling treatment."
       resources:
@@ -525,7 +525,7 @@
     - id: "C37"
       date: ""
       unit: "IV"
-      topic: "Apply the inverse Jacobian to a desired tool velocity. Solve a numerical example and explain why a square, nonsingular Jacobian is required for an ordinary inverse."
+      topic: "The inverse Jacobian"
       notes: []
       reading: "§5.12"
       resources:
@@ -536,7 +536,7 @@
     - id: "C38"
       date: ""
       unit: "V"
-      topic: "Introduce energy-based dynamics and compare it with Newtonian force balance. Form the Lagrangian as kinetic minus potential energy and derive a one-DOF equation."
+      topic: "Introduction to Lagrangian dynamics"
       notes: []
       reading: "§§6.1–6.2"
       resources:
@@ -547,7 +547,7 @@
     - id: "C39"
       date: ""
       unit: "V"
-      topic: "Form kinetic and potential energies for robot links. Calculate center-of-mass velocities and prepare the energy expressions for a two-DOF example."
+      topic: "Kinetic and potential energy of links"
       notes: []
       reading: "§§6.2, 6.4"
       resources:
@@ -562,7 +562,7 @@
     - id: "C40"
       date: ""
       unit: "V"
-      topic: "Calculate effective moments of inertia. Include link, payload, and reflected actuator contributions in a worked joint example."
+      topic: "Effective moments of inertia"
       notes: []
       reading: "§6.3"
       resources:
@@ -573,7 +573,7 @@
     - id: "C41"
       date: ""
       unit: "V"
-      topic: "Apply the Euler–Lagrange equations to the two-DOF energy model. Derive the joint equations and identify inertia, velocity-dependent, and gravity terms."
+      topic: "Euler–Lagrange equations for a two-DOF robot"
       notes: []
       reading: "§§6.2, 6.4"
       resources:
@@ -584,7 +584,7 @@
     - id: "C42"
       date: ""
       unit: "V"
-      topic: "Extend the dynamic model to multiple DOF. Assemble the matrix equation and calculate joint effort for a specified state and acceleration."
+      topic: "Dynamics of multi-DOF robots"
       notes: []
       reading: "§6.4"
       resources:
@@ -599,7 +599,7 @@
     - id: "C43"
       date: ""
       unit: "V"
-      topic: "Perform static force analysis with free-body diagrams and virtual work. Derive the Jacobian-transpose relation between tool force or moment and joint effort with stated sign conventions."
+      topic: "Static force analysis"
       notes: []
       reading: "§6.5"
       resources:
@@ -610,7 +610,7 @@
     - id: "C44"
       date: ""
       unit: "V"
-      topic: "Transform forces and moments between coordinate frames. Account for both axis rotation and the moment caused by shifting the reference point."
+      topic: "Transforming forces and moments"
       notes: []
       reading: "§6.6"
       resources:
@@ -621,7 +621,7 @@
     - id: "C45"
       date: ""
       unit: "V, with I and IV applied"
-      topic: "Solve an integrated static-load problem: transform the tool load, calculate joint effort, and include gravity consistently. Review its connection to the dynamic equations and close remaining questions."
+      topic: "Static loads and final review"
       notes: []
       reading: "§§6.4–6.6"
       resources:
