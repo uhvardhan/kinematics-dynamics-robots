@@ -95,8 +95,8 @@ wide: true
       {%- else %}
       <td class="t-notes is-empty">{{ dash }}</td>
       {%- endif -%}
-      {%- if s.reading and s.reading != "" %}
-      <td class="t-reading" data-label="Reading">{{ s.reading }}</td>
+      {%- if s.reading and s.reading.size > 0 %}
+      <td class="t-reading" data-label="Reading"><ul class="bare">{% for r in s.reading %}<li>{{ r }}</li>{% endfor %}</ul></td>
       {%- else %}
       <td class="t-reading is-empty">{{ dash }}</td>
       {%- endif -%}

@@ -15,8 +15,8 @@
 #     topic      — the Topic column, printed as written.
 #     notes      — the Lecture Notes column: notes, slides or scripts, as
 #                  {name, url}. [] prints an em dash.
-#     reading    — the Reading column: section numbers in Niku, Indian edition.
-#                  "" prints an em dash.
+#     reading    — the Reading column, one line per item: "SBN" + section number
+#                  in Niku, Indian edition. [] prints an em dash.
 #     resources  — the Additional Resources column, as {name, url}.
 #
 # The labels used in resources (Saha, Spong, RA/FDP, RA/Planar, RA/Tutorial, MR)
@@ -39,18 +39,21 @@
       unit: "I"
       topic: "Robots as Mechanisms"
       notes: []
-      reading: "§§1.7–1.8, 2.1–2.3"
+      reading:
+        - "SBN 1.7–1.8"
+        - "SBN 2.1–2.3"
       resources:
-        - name: "RA/FDP 1–3: robot motion and freedom"
+        - name: "RA: Robot motion and freedom (FDP 1–3)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Saha: introductory robot mechanics"
+        - name: "Saha: Introductory robot mechanics"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
     - id: "C02"
       date: ""
       unit: "I"
       topic: "Matrix Representation of a point and vector in space"
       notes: []
-      reading: "§2.4"
+      reading:
+        - "SBN 2.4"
       resources:
         - name: "Saha: Mathematical Fundamentals"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -61,9 +64,10 @@
       unit: "I"
       topic: "Representation of a frame at the origin"
       notes: []
-      reading: "§2.4"
+      reading:
+        - "SBN 2.4"
       resources:
-        - name: "RA/FDP 4: representing orientation"
+        - name: "RA: Representing orientation (FDP 4)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Spong: Rigid Motions and Homogeneous Transformations"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -76,29 +80,32 @@
       unit: "I"
       topic: "Representation of a frame relative to a fixed reference frame, Representation of a rigid body (Pose)"
       notes: []
-      reading: "§2.4"
+      reading:
+        - "SBN 2.4"
       resources:
         - name: "Saha: Transformations"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-        - name: "RA/FDP 9: local and global frames"
+        - name: "RA: Local and global frames (FDP 9)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
     - id: "C05"
       date: ""
       unit: "I"
       topic: "Homogeneous Transformation Matrices (HTM)"
       notes: []
-      reading: "§§2.4–2.5"
+      reading:
+        - "SBN 2.4–2.5"
       resources:
-        - name: "MR: homogeneous transformations"
+        - name: "Modern Robotics: Homogeneous transformations"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-3-1-homogeneous-transformation-matrices/"
     - id: "C06"
       date: ""
       unit: "I"
       topic: "Representation of pure translation"
       notes: []
-      reading: "§2.6"
+      reading:
+        - "SBN 2.6"
       resources:
-        - name: "RA/FDP 5: translation demonstration"
+        - name: "RA: Translation demonstration (FDP 5)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Saha: Transformations"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -111,18 +118,20 @@
       unit: "I"
       topic: "Representation of pure rotations"
       notes: []
-      reading: "§2.6"
+      reading:
+        - "SBN 2.6"
       resources:
-        - name: "RA/FDP 6–7: rotations about coordinate axes"
+        - name: "RA: Rotations about coordinate axes (FDP 6–7)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
     - id: "C08"
       date: ""
       unit: "I"
       topic: "Representation of combined transformations"
       notes: []
-      reading: "§2.6"
+      reading:
+        - "SBN 2.6"
       resources:
-        - name: "RA/FDP 8–9: order and reference frames"
+        - name: "RA: Order and reference frames (FDP 8–9)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Spong: Rigid Motions and Homogeneous Transformations"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -131,9 +140,10 @@
       unit: "I"
       topic: "Inverse of transformation matrices"
       notes: []
-      reading: "§§2.5–2.7"
+      reading:
+        - "SBN 2.5–2.7"
       resources:
-        - name: "MR: homogeneous transformations"
+        - name: "Modern Robotics: Homogeneous transformations"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-3-1-homogeneous-transformation-matrices/"
         - name: "Saha: Transformations"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -146,31 +156,34 @@
       unit: "II"
       topic: "Introduction to Forward Kinematics, Forward Kinematic Equations for Position"
       notes: []
-      reading: "§§2.8–2.9"
+      reading:
+        - "SBN 2.8–2.9"
       resources:
-        - name: "RA/FDP 14: FK concepts"
+        - name: "RA: FK concepts (FDP 14)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "RA/Planar 2: two-link FK"
+        - name: "RA: Two-link FK (Planar 2)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
     - id: "C11"
       date: ""
       unit: "II"
       topic: "Forward Kinematic Equations for Orientation"
       notes: []
-      reading: "§§2.10–2.11"
+      reading:
+        - "SBN 2.10–2.11"
       resources:
         - name: "Spong: Forward and Inverse Kinematics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "RA/Planar 4: three-link FK"
+        - name: "RA: Three-link FK (Planar 4)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
     - id: "C12"
       date: ""
       unit: "II"
       topic: "Link and Joint descriptions, D-H parameter table (a, α, d, θ)"
       notes: []
-      reading: "§2.12"
+      reading:
+        - "SBN 2.12"
       resources:
-        - name: "RA/FDP 10–11: D-H geometry"
+        - name: "RA: D-H geometry (FDP 10–11)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Saha: Kinematics"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -183,9 +196,10 @@
       unit: "II"
       topic: "Assigning coordinate frames"
       notes: []
-      reading: "§2.12"
+      reading:
+        - "SBN 2.12"
       resources:
-        - name: "RA/FDP 12: spatial frame assignment"
+        - name: "RA: Spatial frame assignment (FDP 12)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Spong: Forward and Inverse Kinematics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -194,20 +208,22 @@
       unit: "II"
       topic: "Denavit-Hartenberg (D-H) Representation"
       notes: []
-      reading: "§2.12"
+      reading:
+        - "SBN 2.12"
       resources:
         - name: "Spong: Forward and Inverse Kinematics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "RA/Tutorial: D-H visualization"
+        - name: "RA: D-H visualization (Tutorial)"
           url: "https://www.roboanalyzer.com/tutorials.html"
     - id: "C15"
       date: ""
       unit: "II"
       topic: "Deriving the Forward Kinematic equations for common robots (Articulated)"
       notes: []
-      reading: "§§2.11–2.12"
+      reading:
+        - "SBN 2.11–2.12"
       resources:
-        - name: "RA/FDP 12–13: articulated-chain model"
+        - name: "RA: Articulated-chain model (FDP 12–13)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Saha: Kinematics"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -220,18 +236,21 @@
       unit: "II"
       topic: "Deriving the Forward Kinematic equations for common robots (SCARA)"
       notes: []
-      reading: "§2.12"
+      reading:
+        - "SBN 2.12"
       resources:
         - name: "Spong: Forward and Inverse Kinematics, SCARA example"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "RA/Tutorial: FK demonstration"
+        - name: "RA: FK demonstration (Tutorial)"
           url: "https://www.roboanalyzer.com/tutorials.html"
     - id: "C17"
       date: ""
       unit: "II"
       topic: "Deriving the Forward Kinematic equations for common robots (Cylindrical)"
       notes: []
-      reading: "§§2.9, 2.12"
+      reading:
+        - "SBN 2.9"
+        - "SBN 2.12"
       resources:
         - name: "Spong: Forward and Inverse Kinematics, cylindrical example"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -242,9 +261,10 @@
       unit: "II"
       topic: "Deriving the Forward Kinematic equations for common robots: Practice problems"
       notes: []
-      reading: "§§2.11–2.12"
+      reading:
+        - "SBN 2.11–2.12"
       resources:
-        - name: "RA/Tutorial: FK demonstration"
+        - name: "RA: FK demonstration (Tutorial)"
           url: "https://www.roboanalyzer.com/tutorials.html"
         - name: "Spong: Forward and Inverse Kinematics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -257,9 +277,12 @@
       unit: "III"
       topic: "The Inverse Kinematic Solution of Robots, Workspace analysis"
       notes: []
-      reading: "§§1.12, 2.8, 2.13"
+      reading:
+        - "SBN 1.12"
+        - "SBN 2.8"
+        - "SBN 2.13"
       resources:
-        - name: "MR: task space and workspace"
+        - name: "Modern Robotics: Task space and workspace"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-5-task-space-and-workspace/"
         - name: "Saha: Kinematics"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -268,9 +291,11 @@
       unit: "III"
       topic: "Analytical Solutions: Algebraic approach"
       notes: []
-      reading: "§§2.9, 2.13"
+      reading:
+        - "SBN 2.9"
+        - "SBN 2.13"
       resources:
-        - name: "RA/Planar 6: two-link inverse solution"
+        - name: "RA: Two-link inverse solution (Planar 6)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Spong: Forward and Inverse Kinematics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -279,9 +304,11 @@
       unit: "III"
       topic: "Analytical Solutions: Geometric approach"
       notes: []
-      reading: "§§2.9, 2.13"
+      reading:
+        - "SBN 2.9"
+        - "SBN 2.13"
       resources:
-        - name: "RA/Planar 6: two-link inverse solution"
+        - name: "RA: Two-link inverse solution (Planar 6)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Saha: Kinematics"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -294,9 +321,11 @@
       unit: "III"
       topic: "The Inverse Kinematic Solution of Robots: 3-DOF planar arm"
       notes: []
-      reading: "§§2.9–2.11, 2.13"
+      reading:
+        - "SBN 2.9–2.11"
+        - "SBN 2.13"
       resources:
-        - name: "RA/Planar 8: three-link inverse solution"
+        - name: "RA: Three-link inverse solution (Planar 8)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Spong: Forward and Inverse Kinematics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -305,9 +334,10 @@
       unit: "III"
       topic: "The Inverse Kinematic Solution of Robots: 3-DOF spatial arm"
       notes: []
-      reading: "§2.13"
+      reading:
+        - "SBN 2.13"
       resources:
-        - name: "RA/FDP 17: planar and wrist-partitioned IK"
+        - name: "RA: Planar and wrist-partitioned IK (FDP 17)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Spong: Forward and Inverse Kinematics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -316,11 +346,12 @@
       unit: "Review"
       topic: "Review for Sessional Examination I"
       notes: []
-      reading: "§§2.4–2.13"
+      reading:
+        - "SBN 2.4–2.13"
       resources:
         - name: "Saha: Transformations and Kinematics"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-        - name: "RA/Planar 8: three-link inverse solution"
+        - name: "RA: Three-link inverse solution (Planar 8)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
 
 - week: 9
@@ -331,7 +362,7 @@
       unit: ""
       topic: "Sessional Examination I"
       notes: []
-      reading: ""
+      reading: []
       resources: []
 
 - week: 10
@@ -342,14 +373,16 @@
       unit: ""
       topic: "Sessional Examination I (until February 9)"
       notes: []
-      reading: ""
+      reading: []
       resources: []
     - id: "C25"
       date: ""
       unit: "III"
       topic: "Solvability, Degeneracy and Dexterity"
       notes: []
-      reading: "§§2.13, 2.16"
+      reading:
+        - "SBN 2.13"
+        - "SBN 2.16"
       resources:
         - name: "Spong: Forward and Inverse Kinematics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -360,9 +393,10 @@
       unit: "III"
       topic: "The Inverse Kinematic Solution of Robots: 6-DOF arm, wrist center"
       notes: []
-      reading: "§2.13"
+      reading:
+        - "SBN 2.13"
       resources:
-        - name: "RA/FDP 17: wrist-partitioned IK"
+        - name: "RA: Wrist-partitioned IK (FDP 17)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Spong: Forward and Inverse Kinematics, kinematic decoupling"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -371,11 +405,13 @@
       unit: "III"
       topic: "The Inverse Kinematic Solution of Robots: 6-DOF arm, inverse orientation"
       notes: []
-      reading: "§§2.10–2.11, 2.13"
+      reading:
+        - "SBN 2.10–2.11"
+        - "SBN 2.13"
       resources:
         - name: "Spong: Forward and Inverse Kinematics, inverse orientation"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "RA/Tutorial: IK demonstration"
+        - name: "RA: IK demonstration (Tutorial)"
           url: "https://www.roboanalyzer.com/tutorials.html"
 
 - week: 11
@@ -386,9 +422,10 @@
       unit: "III"
       topic: "Inverse Kinematic programming of robots"
       notes: []
-      reading: "§2.14"
+      reading:
+        - "SBN 2.14"
       resources:
-        - name: "RA/Planar 9: three-link IK program"
+        - name: "RA: Three-link IK program (Planar 9)"
           url: "https://www.roboanalyzer.com/video-lectures.html"
         - name: "Saha: Kinematics and Use of Software"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -397,7 +434,9 @@
       unit: "III"
       topic: "The fundamental problem with D-H representation in Inverse Kinematics"
       notes: []
-      reading: "§§2.13, 2.17"
+      reading:
+        - "SBN 2.13"
+        - "SBN 2.17"
       resources:
         - name: "Spong: Forward and Inverse Kinematics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -408,9 +447,10 @@
       unit: "IV"
       topic: "Introduction to Differential Relationships, The Jacobian Matrix"
       notes: []
-      reading: "§§5.1–5.4"
+      reading:
+        - "SBN 5.1–5.4"
       resources:
-        - name: "MR: velocity kinematics"
+        - name: "Modern Robotics: Velocity kinematics"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/velocity-kinematics-and-statics/"
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -423,7 +463,8 @@
       unit: "IV"
       topic: "Differential motions of a frame versus a robot"
       notes: []
-      reading: "§§5.6–5.7"
+      reading:
+        - "SBN 5.6–5.7"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -434,7 +475,8 @@
       unit: "IV"
       topic: "Interpretation of differential changes"
       notes: []
-      reading: "§§5.8–5.10"
+      reading:
+        - "SBN 5.8–5.10"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -445,11 +487,12 @@
       unit: "IV"
       topic: "Calculation of the Jacobian for serial manipulators"
       notes: []
-      reading: "§5.11"
+      reading:
+        - "SBN 5.11"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "MR: velocity kinematics"
+        - name: "Modern Robotics: Velocity kinematics"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/velocity-kinematics-and-statics/"
 
 - week: 13
@@ -460,7 +503,8 @@
       unit: "IV"
       topic: "Calculation of the Jacobian for serial manipulators (SCARA or Articulated)"
       notes: []
-      reading: "§§5.10–5.11"
+      reading:
+        - "SBN 5.10–5.11"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -471,7 +515,8 @@
       unit: "IV"
       topic: "Relationship between the Jacobian and the Differential Operator"
       notes: []
-      reading: "§5.12"
+      reading:
+        - "SBN 5.12"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -482,11 +527,15 @@
       unit: "IV"
       topic: "Singularity Analysis: Decoupling singularities"
       notes: []
-      reading: "§§5.3, 5.5, 5.13. Use Spong for the arm/wrist decoupling treatment."
+      reading:
+        - "SBN 5.3"
+        - "SBN 5.5"
+        - "SBN 5.13"
+        - "Use Spong for the arm/wrist decoupling treatment."
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian, singularity analysis"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "MR: singularities"
+        - name: "Modern Robotics: Singularities"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-3-singularities/"
 
 - week: 14
@@ -497,33 +546,37 @@
       unit: "IV"
       topic: "The Inverse Jacobian"
       notes: []
-      reading: "§5.13"
+      reading:
+        - "SBN 5.13"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "MR: singularities"
+        - name: "Modern Robotics: Singularities"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-3-singularities/"
     - id: "C38"
       date: ""
       unit: "V"
       topic: "Lagrangian Mechanics: Short overview of energy-based dynamics"
       notes: []
-      reading: "§§6.1–6.2"
+      reading:
+        - "SBN 6.1–6.2"
       resources:
         - name: "Spong: Dynamics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "MR: Lagrangian dynamics, part 1"
+        - name: "Modern Robotics: Lagrangian dynamics, part 1"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/chapter-8-1-lagrangian-formulation-of-dynamics-part-1-of-2/"
     - id: "C39"
       date: ""
       unit: "V"
       topic: "Kinetic and Potential energy formulations"
       notes: []
-      reading: "§§6.2, 6.4"
+      reading:
+        - "SBN 6.2"
+        - "SBN 6.4"
       resources:
         - name: "Spong: Dynamics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "MR: Lagrangian dynamics, part 2"
+        - name: "Modern Robotics: Lagrangian dynamics, part 2"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-1-lagrangian-formulation-of-dynamics-part-2-of-2/"
 
 - week: 15
@@ -534,7 +587,8 @@
       unit: "V"
       topic: "Effective moments of inertia"
       notes: []
-      reading: "§6.3"
+      reading:
+        - "SBN 6.3"
       resources:
         - name: "Saha: Dynamics"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -545,22 +599,25 @@
       unit: "V"
       topic: "Dynamic equations for multiple-DOF robots: Two-DOF example"
       notes: []
-      reading: "§§6.2, 6.4"
+      reading:
+        - "SBN 6.2"
+        - "SBN 6.4"
       resources:
         - name: "Spong: Dynamics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "MR: Lagrangian dynamics, part 2"
+        - name: "Modern Robotics: Lagrangian dynamics, part 2"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-1-lagrangian-formulation-of-dynamics-part-2-of-2/"
     - id: "C42"
       date: ""
       unit: "V"
       topic: "Dynamic equations for multiple-DOF robots"
       notes: []
-      reading: "§6.4"
+      reading:
+        - "SBN 6.4"
       resources:
-        - name: "MR: interpreting the mass matrix"
+        - name: "Modern Robotics: Interpreting the mass matrix"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-1-3-understanding-the-mass-matrix/"
-        - name: "RA/Tutorial: inverse dynamics demonstration"
+        - name: "RA: Inverse dynamics demonstration (Tutorial)"
           url: "https://www.roboanalyzer.com/tutorials.html"
 
 - week: 16
@@ -571,9 +628,10 @@
       unit: "V"
       topic: "Static force analysis of robots, Relationship between joint torques and end-effector forces"
       notes: []
-      reading: "§6.5"
+      reading:
+        - "SBN 6.5"
       resources:
-        - name: "MR: serial-chain statics"
+        - name: "Modern Robotics: Serial-chain statics"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-2-statics-of-open-chains/"
         - name: "Saha: Statics and Manipulator Design"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -582,9 +640,10 @@
       unit: "V"
       topic: "Transformation of forces and moments between coordinate frames"
       notes: []
-      reading: "§6.6"
+      reading:
+        - "SBN 6.6"
       resources:
-        - name: "MR: combined force and moment representation"
+        - name: "Modern Robotics: Combined force and moment representation"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-4-wrenches/"
         - name: "Saha: Statics and Manipulator Design"
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
@@ -593,9 +652,10 @@
       unit: "V"
       topic: "Static force analysis of robots: Combined problem and course review"
       notes: []
-      reading: "§§6.4–6.6"
+      reading:
+        - "SBN 6.4–6.6"
       resources:
-        - name: "MR: serial-chain statics"
+        - name: "Modern Robotics: Serial-chain statics"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-2-statics-of-open-chains/"
         - name: "Spong: Dynamics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -608,5 +668,5 @@
       unit: "Review"
       topic: "Review/Buffer week"
       notes: []
-      reading: ""
+      reading: []
       resources: []
