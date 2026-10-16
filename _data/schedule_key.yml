@@ -2,37 +2,13 @@
 # Adapted from the "Reading and resource key" in the Teaching Plan 2026–27.
 
 labels:
-  - label: "Reading"
-    text: >-
-      Section numbers in the textbook, Saeed B. Niku,
-      [*Introduction to Robotics: Analysis, Control, Applications*](https://www.zybooks.com/catalog/introduction-to-robotics-analysis-control-applications-3e/),
-      3rd edition, Wiley,
-      [Indian edition](https://www.wileyindia.com/introduction-to-robotics-analysis-control-applications-3ed-an-indian-adaptation.html).
-      A listed section marks relevant reading, not a requirement to cover every
-      topic in it.
-  - label: "Saha"
-    text: >-
-      S. K. Saha, [*Introduction to Robotics*](https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india),
-      McGraw-Hill Education. Read the named topic in the edition you have.
-  - label: "Spong"
-    text: >-
-      M. W. Spong, S. Hutchinson and M. Vidyasagar,
-      [*Robot Modeling and Control*](https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook),
-      Wiley. Read the named topic in the edition you have.
-  - label: "RA/FDP"
-    text: >-
-      [RoboAnalyzer video lectures](https://www.roboanalyzer.com/video-lectures.html).
-      Numbers refer to the 2020 Faculty Development Program series, which appears
-      first on the page.
-  - label: "RA/Planar"
-    text: >-
-      [RoboAnalyzer video lectures](https://www.roboanalyzer.com/video-lectures.html).
-      Numbers refer to the separate 2021 planar-manipulator series, below the FDP series.
-  - label: "RA/Tutorial"
-    text: >-
-      [RoboAnalyzer tutorials](https://www.roboanalyzer.com/tutorials.html). Select the
-      named demonstration on the page.
-  - label: "MR"
-    text: >-
-      Modern Robotics videos and transcripts from Northwestern University. These are
-      additional material, not a prescribed textbook; each session links to its video page.
+  - label: "Saeed B. Niku"
+    text: "[*Introduction to Robotics: Analysis, Control, Applications*](https://www.wileyindia.com/introduction-to-robotics-analysis-control-applications-3ed-an-indian-adaptation.html), 3rd edition (Indian edition), Wiley."
+  - label: "S. K. Saha"
+    text: "[*Introduction to Robotics*](https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india), McGraw-Hill Education."
+  - label: "M. W. Spong, S. Hutchinson and M. Vidyasagar"
+    text: "[*Robot Modeling and Control*](https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook), Wiley."
+  - label: "RoboAnalyzer"
+    text: "[RoboAnalyzer Video Lectures](https://www.roboanalyzer.com/video-lectures.html)."
+  - label: "Modern Robotics"
+    text: "Videos from Northwestern University."
