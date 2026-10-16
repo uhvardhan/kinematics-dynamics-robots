@@ -6,16 +6,17 @@
 #   dates      — the Date column, one per line (here, the week's span). It spans
 #                the week's rows until a session in that week has its own date.
 #   sessions   — one row each:
-#     id         — the Session column. C01–C45 are the core hours, R1–R3 the
-#                  conditional reviews in Week 10. "No class" marks the
-#                  Sessional Examination I days.
+#     id         — the Session column. C01–C45 are the core hours. "No class"
+#                  marks the Sessional Examination I days, and "Buffer" the
+#                  review and buffer week (Week 17).
 #     date       — the class date, once the timetable is out. When any session
 #                  in a week has one, each row of that week shows its own date.
 #     unit       — the Unit column (syllabus unit). "" prints an em dash.
 #     topic      — the Topic column, printed as written.
 #     notes      — the Lecture Notes column: notes, slides or scripts, as
 #                  {name, url}. [] prints an em dash.
-#     reading    — the Reading column: Niku section numbers. "" prints an em dash.
+#     reading    — the Reading column: section numbers in Niku, Indian edition.
+#                  "" prints an em dash.
 #     resources  — the Additional Resources column, as {name, url}.
 #
 # The labels used in resources (Saha, Spong, RA/FDP, RA/Planar, RA/Tutorial, MR)
@@ -38,7 +39,7 @@
       unit: "I"
       topic: "Robots as Mechanisms"
       notes: []
-      reading: "§§1.8–1.9, 2.1–2.3"
+      reading: "§§1.7–1.8, 2.1–2.3"
       resources:
         - name: "RA/FDP 1–3: robot motion and freedom"
           url: "https://www.roboanalyzer.com/video-lectures.html"
@@ -256,7 +257,7 @@
       unit: "III"
       topic: "The Inverse Kinematic Solution of Robots, Workspace analysis"
       notes: []
-      reading: "§§1.14, 2.8, 2.13"
+      reading: "§§1.12, 2.8, 2.13"
       resources:
         - name: "MR: task space and workspace"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-5-task-space-and-workspace/"
@@ -343,37 +344,6 @@
       notes: []
       reading: ""
       resources: []
-    - id: "R1"
-      date: ""
-      unit: "I"
-      topic: "Review: Rigid Body Foundations and Spatial Analysis"
-      notes: []
-      reading: "§§2.4–2.7"
-      resources:
-        - name: "MR: homogeneous transformations"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-3-1-homogeneous-transformation-matrices/"
-    - id: "R2"
-      date: ""
-      unit: "II"
-      topic: "Review: Forward Kinematics (D-H Convention)"
-      notes: []
-      reading: "§§2.11–2.12"
-      resources:
-        - name: "RA/Tutorial: FK demonstration"
-          url: "https://www.roboanalyzer.com/tutorials.html"
-    - id: "R3"
-      date: ""
-      unit: "III"
-      topic: "Review: Inverse Kinematics"
-      notes: []
-      reading: "§§2.9, 2.13"
-      resources:
-        - name: "RA/Planar 6 and 8: planar inverse solutions"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-
-- week: 11
-  dates: ["Feb 15–21, 2027"]
-  sessions:
     - id: "C25"
       date: ""
       unit: "III"
@@ -408,8 +378,8 @@
         - name: "RA/Tutorial: IK demonstration"
           url: "https://www.roboanalyzer.com/tutorials.html"
 
-- week: 12
-  dates: ["Feb 22–28, 2027"]
+- week: 11
+  dates: ["Feb 15–21, 2027"]
   sessions:
     - id: "C28"
       date: ""
@@ -445,15 +415,15 @@
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
 
-- week: 13
-  dates: ["Mar 1–7, 2027"]
+- week: 12
+  dates: ["Feb 22–28, 2027"]
   sessions:
     - id: "C31"
       date: ""
       unit: "IV"
       topic: "Differential motions of a frame versus a robot"
       notes: []
-      reading: "§§5.5–5.6"
+      reading: "§§5.6–5.7"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -464,7 +434,7 @@
       unit: "IV"
       topic: "Interpretation of differential changes"
       notes: []
-      reading: "§§5.7–5.9"
+      reading: "§§5.8–5.10"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -475,22 +445,22 @@
       unit: "IV"
       topic: "Calculation of the Jacobian for serial manipulators"
       notes: []
-      reading: "§5.10"
+      reading: "§5.11"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
         - name: "MR: velocity kinematics"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/velocity-kinematics-and-statics/"
 
-- week: 14
-  dates: ["Mar 8–14, 2027"]
+- week: 13
+  dates: ["Mar 1–7, 2027"]
   sessions:
     - id: "C34"
       date: ""
       unit: "IV"
       topic: "Calculation of the Jacobian for serial manipulators (SCARA or Articulated)"
       notes: []
-      reading: "§§5.9–5.10"
+      reading: "§§5.10–5.11"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -501,7 +471,7 @@
       unit: "IV"
       topic: "Relationship between the Jacobian and the Differential Operator"
       notes: []
-      reading: "§5.11"
+      reading: "§5.12"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -512,22 +482,22 @@
       unit: "IV"
       topic: "Singularity Analysis: Decoupling singularities"
       notes: []
-      reading: "§§5.3, 5.12. Use Spong for the arm/wrist decoupling treatment."
+      reading: "§§5.3, 5.5, 5.13. Use Spong for the arm/wrist decoupling treatment."
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian, singularity analysis"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
         - name: "MR: singularities"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-3-singularities/"
 
-- week: 15
-  dates: ["Mar 15–21, 2027"]
+- week: 14
+  dates: ["Mar 8–14, 2027"]
   sessions:
     - id: "C37"
       date: ""
       unit: "IV"
       topic: "The Inverse Jacobian"
       notes: []
-      reading: "§5.12"
+      reading: "§5.13"
       resources:
         - name: "Spong: Velocity Kinematics—The Jacobian"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
@@ -556,8 +526,8 @@
         - name: "MR: Lagrangian dynamics, part 2"
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-1-lagrangian-formulation-of-dynamics-part-2-of-2/"
 
-- week: 16
-  dates: ["Mar 22–28, 2027"]
+- week: 15
+  dates: ["Mar 15–21, 2027"]
   sessions:
     - id: "C40"
       date: ""
@@ -593,8 +563,8 @@
         - name: "RA/Tutorial: inverse dynamics demonstration"
           url: "https://www.roboanalyzer.com/tutorials.html"
 
-- week: 17
-  dates: ["Mar 29–Apr 3, 2027"]
+- week: 16
+  dates: ["Mar 22–28, 2027"]
   sessions:
     - id: "C43"
       date: ""
@@ -629,3 +599,14 @@
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-2-statics-of-open-chains/"
         - name: "Spong: Dynamics"
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+
+- week: 17
+  dates: ["Mar 29–Apr 3, 2027"]
+  sessions:
+    - id: "Buffer"
+      date: ""
+      unit: "Review"
+      topic: "Review/Buffer week"
+      notes: []
+      reading: ""
+      resources: []

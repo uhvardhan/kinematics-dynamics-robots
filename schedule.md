@@ -130,11 +130,5 @@ wide: true
     <div class="specs__row"><dt>{{ k.label }}</dt><dd>{{ k.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</dd></div>
     {%- endfor %}
   </dl>
-  <h2 class="section__title">Abbreviations</h2>
-  <dl class="specs key">
-    {%- for k in site.data.schedule_key.abbreviations %}
-    <div class="specs__row"><dt>{{ k.label }}</dt><dd>{{ k.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</dd></div>
-    {%- endfor %}
-  </dl>
 </div>
 {% endif %}

@@ -443,8 +443,8 @@ tbody tr:hover td { background: rgba(21, 29, 43, .022); }
 
 .schedule td.t-topic { color: var(--ink); }
 
-/* The key and abbreviations under the table keep to a readable measure, flush
-   left with the table rather than centred under it. */
+/* The key under the table keeps to a readable measure, flush left with the
+   table rather than centred under it. */
 .schedule-key { max-width: 60rem; margin-top: 3rem; }
 /* A link to #key lands here; clear the sticky nav. */
 .schedule-key { scroll-margin-top: 4rem; }

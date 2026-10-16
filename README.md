@@ -38,7 +38,7 @@ bundle exec jekyll serve --livereload
 | Course code, scheme, timings, venue, assessment, instructors | `_data/course.yml` |
 | The course description on the home page | `index.md` |
 | The session-by-session schedule, class dates and files | `_data/schedule.yml` |
-| The key and abbreviations under the schedule | `_data/schedule_key.yml` |
+| The key under the schedule | `_data/schedule_key.yml` |
 | Announcements on the home page | `_data/updates.yml` |
 | The nav bar | `_data/nav.yml` |
 | Institute name, logo, semester label, `baseurl` | `_config.yml` |
@@ -65,8 +65,8 @@ course or a laboratory. The heading of the schedule's Topic column is in `schedu
 ## The schedule
 
 `_data/schedule.yml` was generated from the Teaching Plan 2026–27: one entry per week,
-each with its sessions (C01–C45, the conditional reviews R1–R3, and the "No class" rows
-for Sessional Examination I). Each session is a row on the Schedule page, with the
+each with its sessions (C01–C45, the "No class" rows for Sessional Examination I, and
+the Week 17 review and buffer row). Each session is a row on the Schedule page, with the
 columns Week, Date, Session, Unit, Topic, Lecture Notes, Reading and Additional
 Resources. The Week and Date cells span that week's rows. On phones the table turns
 into a list, one block per session.
