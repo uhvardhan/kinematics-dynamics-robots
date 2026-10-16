@@ -46,5 +46,10 @@ instructors:
     url: "https://uhvardhan.github.io"
     email: ""
     photo: "/assets/images/harshvardhan-uppaluru.jpg"
+  - name: "TBD"   # PLACEHOLDER — second instructor, to be confirmed
+    role: ""
+    url: ""
+    email: ""
+    photo: "/assets/images/avatar-tbd.svg"   # silhouette placeholder until a photo is available
 
 teaching_assistants: []

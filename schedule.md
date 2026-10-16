@@ -20,6 +20,9 @@ wide: true
 
   Cells that would print an em dash carry .is-empty, so the phone layout, which
   stacks each session as a block, can leave them out.
+
+  On phones the Unit cell reads "Unit III". A Unit value that is a word, such as
+  "Review", carries .t-unit--word so it prints without that prefix.
 {%- endcomment -%}
 {%- assign weeks = "" | split: "" -%}
 {%- for w in site.data.schedule -%}
@@ -81,7 +84,8 @@ wide: true
       {%- endif %}
       <td class="t-session t-mono">{{ s.id | default: "—" }}</td>
       {%- if s.unit and s.unit != "" %}
-      <td class="t-unit">{{ s.unit }}</td>
+      {%- assign unit_start = s.unit | slice: 0 %}
+      <td class="t-unit{% unless unit_start == "I" or unit_start == "V" %} t-unit--word{% endunless %}">{{ s.unit }}</td>
       {%- else %}
       <td class="t-unit is-empty">{{ dash }}</td>
       {%- endif %}

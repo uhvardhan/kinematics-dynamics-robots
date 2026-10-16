@@ -36,7 +36,7 @@
     - id: "C01"
       date: ""
       unit: "I"
-      topic: "Robots as mechanisms"
+      topic: "Robots as Mechanisms"
       notes: []
       reading: "§§1.8–1.9, 2.1–2.3"
       resources:
@@ -47,7 +47,7 @@
     - id: "C02"
       date: ""
       unit: "I"
-      topic: "Points and vectors in space"
+      topic: "Matrix Representation of a point and vector in space"
       notes: []
       reading: "§2.4"
       resources:
@@ -58,7 +58,7 @@
     - id: "C03"
       date: ""
       unit: "I"
-      topic: "Frame at the origin and orientation matrix"
+      topic: "Representation of a frame at the origin"
       notes: []
       reading: "§2.4"
       resources:
@@ -73,7 +73,7 @@
     - id: "C04"
       date: ""
       unit: "I"
-      topic: "Relative frames and rigid-body pose"
+      topic: "Representation of a frame relative to a fixed reference frame, Representation of a rigid body (Pose)"
       notes: []
       reading: "§2.4"
       resources:
@@ -84,7 +84,7 @@
     - id: "C05"
       date: ""
       unit: "I"
-      topic: "Homogeneous transformation matrices"
+      topic: "Homogeneous Transformation Matrices (HTM)"
       notes: []
       reading: "§§2.4–2.5"
       resources:
@@ -93,7 +93,7 @@
     - id: "C06"
       date: ""
       unit: "I"
-      topic: "Pure translation"
+      topic: "Representation of pure translation"
       notes: []
       reading: "§2.6"
       resources:
@@ -108,7 +108,7 @@
     - id: "C07"
       date: ""
       unit: "I"
-      topic: "Pure rotation about the x, y and z axes"
+      topic: "Representation of pure rotations"
       notes: []
       reading: "§2.6"
       resources:
@@ -117,7 +117,7 @@
     - id: "C08"
       date: ""
       unit: "I"
-      topic: "Combined rotations and translations"
+      topic: "Representation of combined transformations"
       notes: []
       reading: "§2.6"
       resources:
@@ -128,7 +128,7 @@
     - id: "C09"
       date: ""
       unit: "I"
-      topic: "Inverse of a transformation matrix"
+      topic: "Inverse of transformation matrices"
       notes: []
       reading: "§§2.5–2.7"
       resources:
@@ -143,7 +143,7 @@
     - id: "C10"
       date: ""
       unit: "II"
-      topic: "Introduction to forward kinematics"
+      topic: "Introduction to Forward Kinematics, Forward Kinematic Equations for Position"
       notes: []
       reading: "§§2.8–2.9"
       resources:
@@ -154,7 +154,7 @@
     - id: "C11"
       date: ""
       unit: "II"
-      topic: "Forward kinematics for orientation"
+      topic: "Forward Kinematic Equations for Orientation"
       notes: []
       reading: "§§2.10–2.11"
       resources:
@@ -165,7 +165,7 @@
     - id: "C12"
       date: ""
       unit: "II"
-      topic: "Links, joints and D-H parameters"
+      topic: "Link and Joint descriptions, D-H parameter table (a, α, d, θ)"
       notes: []
       reading: "§2.12"
       resources:
@@ -180,7 +180,7 @@
     - id: "C13"
       date: ""
       unit: "II"
-      topic: "Assigning D-H frames"
+      topic: "Assigning coordinate frames"
       notes: []
       reading: "§2.12"
       resources:
@@ -191,7 +191,7 @@
     - id: "C14"
       date: ""
       unit: "II"
-      topic: "The D-H link transformation"
+      topic: "Denavit-Hartenberg (D-H) Representation"
       notes: []
       reading: "§2.12"
       resources:
@@ -202,7 +202,7 @@
     - id: "C15"
       date: ""
       unit: "II"
-      topic: "Forward kinematics: articulated robot"
+      topic: "Deriving the Forward Kinematic equations for common robots (Articulated)"
       notes: []
       reading: "§§2.11–2.12"
       resources:
@@ -217,7 +217,7 @@
     - id: "C16"
       date: ""
       unit: "II"
-      topic: "Forward kinematics: SCARA robot"
+      topic: "Deriving the Forward Kinematic equations for common robots (SCARA)"
       notes: []
       reading: "§2.12"
       resources:
@@ -228,7 +228,7 @@
     - id: "C17"
       date: ""
       unit: "II"
-      topic: "Forward kinematics: cylindrical robot"
+      topic: "Deriving the Forward Kinematic equations for common robots (Cylindrical)"
       notes: []
       reading: "§§2.9, 2.12"
       resources:
@@ -239,7 +239,7 @@
     - id: "C18"
       date: ""
       unit: "II"
-      topic: "Forward kinematics: practice problems"
+      topic: "Deriving the Forward Kinematic equations for common robots: Practice problems"
       notes: []
       reading: "§§2.11–2.12"
       resources:
@@ -253,8 +253,8 @@
   sessions:
     - id: "C19"
       date: ""
-      unit: "III, first half"
-      topic: "The inverse kinematics problem and workspace"
+      unit: "III"
+      topic: "The Inverse Kinematic Solution of Robots, Workspace analysis"
       notes: []
       reading: "§§1.14, 2.8, 2.13"
       resources:
@@ -264,8 +264,8 @@
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
     - id: "C20"
       date: ""
-      unit: "III, first half"
-      topic: "Two-link inverse kinematics: algebraic method"
+      unit: "III"
+      topic: "Analytical Solutions: Algebraic approach"
       notes: []
       reading: "§§2.9, 2.13"
       resources:
@@ -275,8 +275,8 @@
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
     - id: "C21"
       date: ""
-      unit: "III, first half"
-      topic: "Two-link inverse kinematics: geometric method"
+      unit: "III"
+      topic: "Analytical Solutions: Geometric approach"
       notes: []
       reading: "§§2.9, 2.13"
       resources:
@@ -290,8 +290,8 @@
   sessions:
     - id: "C22"
       date: ""
-      unit: "III, first half"
-      topic: "Three-DOF planar inverse kinematics"
+      unit: "III"
+      topic: "The Inverse Kinematic Solution of Robots: 3-DOF planar arm"
       notes: []
       reading: "§§2.9–2.11, 2.13"
       resources:
@@ -301,8 +301,8 @@
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
     - id: "C23"
       date: ""
-      unit: "III, first half"
-      topic: "Three-DOF spatial inverse kinematics"
+      unit: "III"
+      topic: "The Inverse Kinematic Solution of Robots: 3-DOF spatial arm"
       notes: []
       reading: "§2.13"
       resources:
@@ -312,7 +312,7 @@
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
     - id: "C24"
       date: ""
-      unit: "I, II, III first half: review"
+      unit: "Review"
       topic: "Review for Sessional Examination I"
       notes: []
       reading: "§§2.4–2.13"
@@ -345,8 +345,8 @@
       resources: []
     - id: "R1"
       date: ""
-      unit: "I: review"
-      topic: "Review: frames and transformations"
+      unit: "I"
+      topic: "Review: Rigid Body Foundations and Spatial Analysis"
       notes: []
       reading: "§§2.4–2.7"
       resources:
@@ -354,8 +354,8 @@
           url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-3-1-homogeneous-transformation-matrices/"
     - id: "R2"
       date: ""
-      unit: "II: review"
-      topic: "Review: D-H tables and forward kinematics"
+      unit: "II"
+      topic: "Review: Forward Kinematics (D-H Convention)"
       notes: []
       reading: "§§2.11–2.12"
       resources:
@@ -363,8 +363,8 @@
           url: "https://www.roboanalyzer.com/tutorials.html"
     - id: "R3"
       date: ""
-      unit: "III first half: review"
-      topic: "Review: inverse kinematics branches and workspace"
+      unit: "III"
+      topic: "Review: Inverse Kinematics"
       notes: []
       reading: "§§2.9, 2.13"
       resources:
@@ -376,8 +376,8 @@
   sessions:
     - id: "C25"
       date: ""
-      unit: "III, second half"
-      topic: "Solvability, degeneracy and dexterity"
+      unit: "III"
+      topic: "Solvability, Degeneracy and Dexterity"
       notes: []
       reading: "§§2.13, 2.16"
       resources:
@@ -387,8 +387,8 @@
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
     - id: "C26"
       date: ""
-      unit: "III, second half"
-      topic: "Six-DOF inverse kinematics: wrist center"
+      unit: "III"
+      topic: "The Inverse Kinematic Solution of Robots: 6-DOF arm, wrist center"
       notes: []
       reading: "§2.13"
       resources:
@@ -398,8 +398,8 @@
           url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
     - id: "C27"
       date: ""
-      unit: "III, second half"
-      topic: "Six-DOF inverse kinematics: inverse orientation"
+      unit: "III"
+      topic: "The Inverse Kinematic Solution of Robots: 6-DOF arm, inverse orientation"
       notes: []
       reading: "§§2.10–2.11, 2.13"
       resources:
@@ -413,8 +413,8 @@
   sessions:
     - id: "C28"
       date: ""
-      unit: "III, second half"
-      topic: "Programming inverse kinematics"
+      unit: "III"
+      topic: "Inverse Kinematic programming of robots"
       notes: []
       reading: "§2.14"
       resources:
@@ -424,8 +424,8 @@
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
     - id: "C29"
       date: ""
-      unit: "III, second half"
-      topic: "Limits of D-H representation in inverse kinematics"
+      unit: "III"
+      topic: "The fundamental problem with D-H representation in Inverse Kinematics"
       notes: []
       reading: "§§2.13, 2.17"
       resources:
@@ -436,7 +436,7 @@
     - id: "C30"
       date: ""
       unit: "IV"
-      topic: "Differential relationships and the Jacobian"
+      topic: "Introduction to Differential Relationships, The Jacobian Matrix"
       notes: []
       reading: "§§5.1–5.4"
       resources:
@@ -451,7 +451,7 @@
     - id: "C31"
       date: ""
       unit: "IV"
-      topic: "Differential motion and the differential operator"
+      topic: "Differential motions of a frame versus a robot"
       notes: []
       reading: "§§5.5–5.6"
       resources:
@@ -462,7 +462,7 @@
     - id: "C32"
       date: ""
       unit: "IV"
-      topic: "Interpreting differential changes"
+      topic: "Interpretation of differential changes"
       notes: []
       reading: "§§5.7–5.9"
       resources:
@@ -473,7 +473,7 @@
     - id: "C33"
       date: ""
       unit: "IV"
-      topic: "Calculating the Jacobian"
+      topic: "Calculation of the Jacobian for serial manipulators"
       notes: []
       reading: "§5.10"
       resources:
@@ -488,7 +488,7 @@
     - id: "C34"
       date: ""
       unit: "IV"
-      topic: "Jacobian of a SCARA or articulated robot"
+      topic: "Calculation of the Jacobian for serial manipulators (SCARA or Articulated)"
       notes: []
       reading: "§§5.9–5.10"
       resources:
@@ -499,7 +499,7 @@
     - id: "C35"
       date: ""
       unit: "IV"
-      topic: "The Jacobian and the differential operator"
+      topic: "Relationship between the Jacobian and the Differential Operator"
       notes: []
       reading: "§5.11"
       resources:
@@ -510,7 +510,7 @@
     - id: "C36"
       date: ""
       unit: "IV"
-      topic: "Singularity analysis"
+      topic: "Singularity Analysis: Decoupling singularities"
       notes: []
       reading: "§§5.3, 5.12. Use Spong for the arm/wrist decoupling treatment."
       resources:
@@ -525,7 +525,7 @@
     - id: "C37"
       date: ""
       unit: "IV"
-      topic: "The inverse Jacobian"
+      topic: "The Inverse Jacobian"
       notes: []
       reading: "§5.12"
       resources:
@@ -536,7 +536,7 @@
     - id: "C38"
       date: ""
       unit: "V"
-      topic: "Introduction to Lagrangian dynamics"
+      topic: "Lagrangian Mechanics: Short overview of energy-based dynamics"
       notes: []
       reading: "§§6.1–6.2"
       resources:
@@ -547,7 +547,7 @@
     - id: "C39"
       date: ""
       unit: "V"
-      topic: "Kinetic and potential energy of links"
+      topic: "Kinetic and Potential energy formulations"
       notes: []
       reading: "§§6.2, 6.4"
       resources:
@@ -573,7 +573,7 @@
     - id: "C41"
       date: ""
       unit: "V"
-      topic: "Euler–Lagrange equations for a two-DOF robot"
+      topic: "Dynamic equations for multiple-DOF robots: Two-DOF example"
       notes: []
       reading: "§§6.2, 6.4"
       resources:
@@ -584,7 +584,7 @@
     - id: "C42"
       date: ""
       unit: "V"
-      topic: "Dynamics of multi-DOF robots"
+      topic: "Dynamic equations for multiple-DOF robots"
       notes: []
       reading: "§6.4"
       resources:
@@ -599,7 +599,7 @@
     - id: "C43"
       date: ""
       unit: "V"
-      topic: "Static force analysis"
+      topic: "Static force analysis of robots, Relationship between joint torques and end-effector forces"
       notes: []
       reading: "§6.5"
       resources:
@@ -610,7 +610,7 @@
     - id: "C44"
       date: ""
       unit: "V"
-      topic: "Transforming forces and moments"
+      topic: "Transformation of forces and moments between coordinate frames"
       notes: []
       reading: "§6.6"
       resources:
@@ -620,8 +620,8 @@
           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
     - id: "C45"
       date: ""
-      unit: "V, with I and IV applied"
-      topic: "Static loads and final review"
+      unit: "V"
+      topic: "Static force analysis of robots: Combined problem and course review"
       notes: []
       reading: "§§6.4–6.6"
       resources:
