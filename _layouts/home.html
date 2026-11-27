@@ -88,7 +88,7 @@ layout: default
 </section>
 
 <section class="section">
-  <h2 class="section__title section__title--lead">Instructors</h2>
+  <h2 class="section__title section__title--lead">Instructor{% if c.instructors.size > 1 %}s{% endif %}</h2>
   <ul class="people">
     {%- for p in c.instructors -%}
     <li class="person">

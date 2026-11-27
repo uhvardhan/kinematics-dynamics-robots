@@ -31,642 +31,86 @@
 # Write a space in a file name as %20 and an & as %26. An external link (https://…)
 # is used as written. A week with no dates and no sessions is left off the page.
 
+# To add a session, replace a week's `sessions: []` with a list like this:
+#
+#   sessions:
+#     - id: "C01"
+#       date: ""
+#       unit: "I"
+#       topic: "Robots as Mechanisms"
+#       notes: []
+#       reading:
+#         - "SBN 1.7–1.8"
+#       resources:
+#         - name: "Saha: Introductory robot mechanics"
+#           url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+#
+# A week with dates but no sessions shows one row of dashes under its dates.
+
 - week: 1
   dates: ["Dec 7–13, 2026"]
-  sessions:
-    - id: "C01"
-      date: ""
-      unit: "I"
-      topic: "Robots as Mechanisms"
-      notes: []
-      reading:
-        - "SBN 1.7–1.8"
-        - "SBN 2.1–2.3"
-      resources:
-        - name: "RA: Robot motion and freedom (FDP 1–3)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Saha: Introductory robot mechanics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C02"
-      date: ""
-      unit: "I"
-      topic: "Matrix Representation of a point and vector in space"
-      notes: []
-      reading:
-        - "SBN 2.4"
-      resources:
-        - name: "Saha: Mathematical Fundamentals"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-        - name: "Spong: Linear Algebra appendix"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-    - id: "C03"
-      date: ""
-      unit: "I"
-      topic: "Representation of a frame at the origin"
-      notes: []
-      reading:
-        - "SBN 2.4"
-      resources:
-        - name: "RA: Representing orientation (FDP 4)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Spong: Rigid Motions and Homogeneous Transformations"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+  sessions: []
 
 - week: 2
   dates: ["Dec 14–20, 2026"]
-  sessions:
-    - id: "C04"
-      date: ""
-      unit: "I"
-      topic: "Representation of a frame relative to a fixed reference frame, Representation of a rigid body (Pose)"
-      notes: []
-      reading:
-        - "SBN 2.4"
-      resources:
-        - name: "Saha: Transformations"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-        - name: "RA: Local and global frames (FDP 9)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-    - id: "C05"
-      date: ""
-      unit: "I"
-      topic: "Homogeneous Transformation Matrices (HTM)"
-      notes: []
-      reading:
-        - "SBN 2.4–2.5"
-      resources:
-        - name: "Modern Robotics: Homogeneous transformations"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-3-1-homogeneous-transformation-matrices/"
-    - id: "C06"
-      date: ""
-      unit: "I"
-      topic: "Representation of pure translation"
-      notes: []
-      reading:
-        - "SBN 2.6"
-      resources:
-        - name: "RA: Translation demonstration (FDP 5)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Saha: Transformations"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+  sessions: []
 
 - week: 3
   dates: ["Dec 21–27, 2026"]
-  sessions:
-    - id: "C07"
-      date: ""
-      unit: "I"
-      topic: "Representation of pure rotations"
-      notes: []
-      reading:
-        - "SBN 2.6"
-      resources:
-        - name: "RA: Rotations about coordinate axes (FDP 6–7)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-    - id: "C08"
-      date: ""
-      unit: "I"
-      topic: "Representation of combined transformations"
-      notes: []
-      reading:
-        - "SBN 2.6"
-      resources:
-        - name: "RA: Order and reference frames (FDP 8–9)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Spong: Rigid Motions and Homogeneous Transformations"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-    - id: "C09"
-      date: ""
-      unit: "I"
-      topic: "Inverse of transformation matrices"
-      notes: []
-      reading:
-        - "SBN 2.5–2.7"
-      resources:
-        - name: "Modern Robotics: Homogeneous transformations"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-3-1-homogeneous-transformation-matrices/"
-        - name: "Saha: Transformations"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+  sessions: []
 
 - week: 4
   dates: ["Dec 28, 2026–Jan 3, 2027"]
-  sessions:
-    - id: "C10"
-      date: ""
-      unit: "II"
-      topic: "Introduction to Forward Kinematics, Forward Kinematic Equations for Position"
-      notes: []
-      reading:
-        - "SBN 2.8–2.9"
-      resources:
-        - name: "RA: FK concepts (FDP 14)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "RA: Two-link FK (Planar 2)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-    - id: "C11"
-      date: ""
-      unit: "II"
-      topic: "Forward Kinematic Equations for Orientation"
-      notes: []
-      reading:
-        - "SBN 2.10–2.11"
-      resources:
-        - name: "Spong: Forward and Inverse Kinematics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "RA: Three-link FK (Planar 4)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-    - id: "C12"
-      date: ""
-      unit: "II"
-      topic: "Link and Joint descriptions, D-H parameter table (a, α, d, θ)"
-      notes: []
-      reading:
-        - "SBN 2.12"
-      resources:
-        - name: "RA: D-H geometry (FDP 10–11)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+  sessions: []
 
 - week: 5
   dates: ["Jan 4–10, 2027"]
-  sessions:
-    - id: "C13"
-      date: ""
-      unit: "II"
-      topic: "Assigning coordinate frames"
-      notes: []
-      reading:
-        - "SBN 2.12"
-      resources:
-        - name: "RA: Spatial frame assignment (FDP 12)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Spong: Forward and Inverse Kinematics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-    - id: "C14"
-      date: ""
-      unit: "II"
-      topic: "Denavit-Hartenberg (D-H) Representation"
-      notes: []
-      reading:
-        - "SBN 2.12"
-      resources:
-        - name: "Spong: Forward and Inverse Kinematics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "RA: D-H visualization (Tutorial)"
-          url: "https://www.roboanalyzer.com/tutorials.html"
-    - id: "C15"
-      date: ""
-      unit: "II"
-      topic: "Deriving the Forward Kinematic equations for common robots (Articulated)"
-      notes: []
-      reading:
-        - "SBN 2.11–2.12"
-      resources:
-        - name: "RA: Articulated-chain model (FDP 12–13)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+  sessions: []
 
 - week: 6
   dates: ["Jan 11–17, 2027"]
-  sessions:
-    - id: "C16"
-      date: ""
-      unit: "II"
-      topic: "Deriving the Forward Kinematic equations for common robots (SCARA)"
-      notes: []
-      reading:
-        - "SBN 2.12"
-      resources:
-        - name: "Spong: Forward and Inverse Kinematics, SCARA example"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "RA: FK demonstration (Tutorial)"
-          url: "https://www.roboanalyzer.com/tutorials.html"
-    - id: "C17"
-      date: ""
-      unit: "II"
-      topic: "Deriving the Forward Kinematic equations for common robots (Cylindrical)"
-      notes: []
-      reading:
-        - "SBN 2.9"
-        - "SBN 2.12"
-      resources:
-        - name: "Spong: Forward and Inverse Kinematics, cylindrical example"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C18"
-      date: ""
-      unit: "II"
-      topic: "Deriving the Forward Kinematic equations for common robots: Practice problems"
-      notes: []
-      reading:
-        - "SBN 2.11–2.12"
-      resources:
-        - name: "RA: FK demonstration (Tutorial)"
-          url: "https://www.roboanalyzer.com/tutorials.html"
-        - name: "Spong: Forward and Inverse Kinematics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+  sessions: []
 
 - week: 7
   dates: ["Jan 18–24, 2027"]
-  sessions:
-    - id: "C19"
-      date: ""
-      unit: "III"
-      topic: "The Inverse Kinematic Solution of Robots, Workspace analysis"
-      notes: []
-      reading:
-        - "SBN 1.12"
-        - "SBN 2.8"
-        - "SBN 2.13"
-      resources:
-        - name: "Modern Robotics: Task space and workspace"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-5-task-space-and-workspace/"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C20"
-      date: ""
-      unit: "III"
-      topic: "Analytical Solutions: Algebraic approach"
-      notes: []
-      reading:
-        - "SBN 2.9"
-        - "SBN 2.13"
-      resources:
-        - name: "RA: Two-link inverse solution (Planar 6)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Spong: Forward and Inverse Kinematics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-    - id: "C21"
-      date: ""
-      unit: "III"
-      topic: "Analytical Solutions: Geometric approach"
-      notes: []
-      reading:
-        - "SBN 2.9"
-        - "SBN 2.13"
-      resources:
-        - name: "RA: Two-link inverse solution (Planar 6)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
+  sessions: []
 
 - week: 8
   dates: ["Jan 25–31, 2027"]
-  sessions:
-    - id: "C22"
-      date: ""
-      unit: "III"
-      topic: "The Inverse Kinematic Solution of Robots: 3-DOF planar arm"
-      notes: []
-      reading:
-        - "SBN 2.9–2.11"
-        - "SBN 2.13"
-      resources:
-        - name: "RA: Three-link inverse solution (Planar 8)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Spong: Forward and Inverse Kinematics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-    - id: "C23"
-      date: ""
-      unit: "III"
-      topic: "The Inverse Kinematic Solution of Robots: 3-DOF spatial arm"
-      notes: []
-      reading:
-        - "SBN 2.13"
-      resources:
-        - name: "RA: Planar and wrist-partitioned IK (FDP 17)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Spong: Forward and Inverse Kinematics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-    - id: "C24"
-      date: ""
-      unit: "Review"
-      topic: "Review for Sessional Examination I"
-      notes: []
-      reading:
-        - "SBN 2.4–2.13"
-      resources:
-        - name: "Saha: Transformations and Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-        - name: "RA: Three-link inverse solution (Planar 8)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
+  sessions: []
 
 - week: 9
   dates: ["Feb 1–7, 2027"]
-  sessions:
-    - id: "No class"
-      date: ""
-      unit: ""
-      topic: "Sessional Examination I"
-      notes: []
-      reading: []
-      resources: []
+  sessions: []
 
 - week: 10
   dates: ["Feb 8–14, 2027"]
-  sessions:
-    - id: "No class"
-      date: ""
-      unit: ""
-      topic: "Sessional Examination I (until February 9)"
-      notes: []
-      reading: []
-      resources: []
-    - id: "C25"
-      date: ""
-      unit: "III"
-      topic: "Solvability, Degeneracy and Dexterity"
-      notes: []
-      reading:
-        - "SBN 2.13"
-        - "SBN 2.16"
-      resources:
-        - name: "Spong: Forward and Inverse Kinematics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C26"
-      date: ""
-      unit: "III"
-      topic: "The Inverse Kinematic Solution of Robots: 6-DOF arm, wrist center"
-      notes: []
-      reading:
-        - "SBN 2.13"
-      resources:
-        - name: "RA: Wrist-partitioned IK (FDP 17)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Spong: Forward and Inverse Kinematics, kinematic decoupling"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-    - id: "C27"
-      date: ""
-      unit: "III"
-      topic: "The Inverse Kinematic Solution of Robots: 6-DOF arm, inverse orientation"
-      notes: []
-      reading:
-        - "SBN 2.10–2.11"
-        - "SBN 2.13"
-      resources:
-        - name: "Spong: Forward and Inverse Kinematics, inverse orientation"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "RA: IK demonstration (Tutorial)"
-          url: "https://www.roboanalyzer.com/tutorials.html"
+  sessions: []
 
 - week: 11
   dates: ["Feb 15–21, 2027"]
-  sessions:
-    - id: "C28"
-      date: ""
-      unit: "III"
-      topic: "Inverse Kinematic programming of robots"
-      notes: []
-      reading:
-        - "SBN 2.14"
-      resources:
-        - name: "RA: Three-link IK program (Planar 9)"
-          url: "https://www.roboanalyzer.com/video-lectures.html"
-        - name: "Saha: Kinematics and Use of Software"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C29"
-      date: ""
-      unit: "III"
-      topic: "The fundamental problem with D-H representation in Inverse Kinematics"
-      notes: []
-      reading:
-        - "SBN 2.13"
-        - "SBN 2.17"
-      resources:
-        - name: "Spong: Forward and Inverse Kinematics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C30"
-      date: ""
-      unit: "IV"
-      topic: "Introduction to Differential Relationships, The Jacobian Matrix"
-      notes: []
-      reading:
-        - "SBN 5.1–5.4"
-      resources:
-        - name: "Modern Robotics: Velocity kinematics"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/velocity-kinematics-and-statics/"
-        - name: "Spong: Velocity Kinematics—The Jacobian"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+  sessions: []
 
 - week: 12
   dates: ["Feb 22–28, 2027"]
-  sessions:
-    - id: "C31"
-      date: ""
-      unit: "IV"
-      topic: "Differential motions of a frame versus a robot"
-      notes: []
-      reading:
-        - "SBN 5.6–5.7"
-      resources:
-        - name: "Spong: Velocity Kinematics—The Jacobian"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C32"
-      date: ""
-      unit: "IV"
-      topic: "Interpretation of differential changes"
-      notes: []
-      reading:
-        - "SBN 5.8–5.10"
-      resources:
-        - name: "Spong: Velocity Kinematics—The Jacobian"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C33"
-      date: ""
-      unit: "IV"
-      topic: "Calculation of the Jacobian for serial manipulators"
-      notes: []
-      reading:
-        - "SBN 5.11"
-      resources:
-        - name: "Spong: Velocity Kinematics—The Jacobian"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Modern Robotics: Velocity kinematics"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/velocity-kinematics-and-statics/"
+  sessions: []
 
 - week: 13
   dates: ["Mar 1–7, 2027"]
-  sessions:
-    - id: "C34"
-      date: ""
-      unit: "IV"
-      topic: "Calculation of the Jacobian for serial manipulators (SCARA or Articulated)"
-      notes: []
-      reading:
-        - "SBN 5.10–5.11"
-      resources:
-        - name: "Spong: Velocity Kinematics—The Jacobian"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C35"
-      date: ""
-      unit: "IV"
-      topic: "Relationship between the Jacobian and the Differential Operator"
-      notes: []
-      reading:
-        - "SBN 5.12"
-      resources:
-        - name: "Spong: Velocity Kinematics—The Jacobian"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Saha: Kinematics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C36"
-      date: ""
-      unit: "IV"
-      topic: "Singularity Analysis: Decoupling singularities"
-      notes: []
-      reading:
-        - "SBN 5.3"
-        - "SBN 5.5"
-        - "SBN 5.13"
-        - "Use Spong for the arm/wrist decoupling treatment."
-      resources:
-        - name: "Spong: Velocity Kinematics—The Jacobian, singularity analysis"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Modern Robotics: Singularities"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-3-singularities/"
+  sessions: []
 
 - week: 14
   dates: ["Mar 8–14, 2027"]
-  sessions:
-    - id: "C37"
-      date: ""
-      unit: "IV"
-      topic: "The Inverse Jacobian"
-      notes: []
-      reading:
-        - "SBN 5.13"
-      resources:
-        - name: "Spong: Velocity Kinematics—The Jacobian"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Modern Robotics: Singularities"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-3-singularities/"
-    - id: "C38"
-      date: ""
-      unit: "V"
-      topic: "Lagrangian Mechanics: Short overview of energy-based dynamics"
-      notes: []
-      reading:
-        - "SBN 6.1–6.2"
-      resources:
-        - name: "Spong: Dynamics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Modern Robotics: Lagrangian dynamics, part 1"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/chapter-8-1-lagrangian-formulation-of-dynamics-part-1-of-2/"
-    - id: "C39"
-      date: ""
-      unit: "V"
-      topic: "Kinetic and Potential energy formulations"
-      notes: []
-      reading:
-        - "SBN 6.2"
-        - "SBN 6.4"
-      resources:
-        - name: "Spong: Dynamics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Modern Robotics: Lagrangian dynamics, part 2"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-1-lagrangian-formulation-of-dynamics-part-2-of-2/"
+  sessions: []
 
 - week: 15
   dates: ["Mar 15–21, 2027"]
-  sessions:
-    - id: "C40"
-      date: ""
-      unit: "V"
-      topic: "Effective moments of inertia"
-      notes: []
-      reading:
-        - "SBN 6.3"
-      resources:
-        - name: "Saha: Dynamics"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-        - name: "Spong: Dynamics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-    - id: "C41"
-      date: ""
-      unit: "V"
-      topic: "Dynamic equations for multiple-DOF robots: Two-DOF example"
-      notes: []
-      reading:
-        - "SBN 6.2"
-        - "SBN 6.4"
-      resources:
-        - name: "Spong: Dynamics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
-        - name: "Modern Robotics: Lagrangian dynamics, part 2"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-1-lagrangian-formulation-of-dynamics-part-2-of-2/"
-    - id: "C42"
-      date: ""
-      unit: "V"
-      topic: "Dynamic equations for multiple-DOF robots"
-      notes: []
-      reading:
-        - "SBN 6.4"
-      resources:
-        - name: "Modern Robotics: Interpreting the mass matrix"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-1-3-understanding-the-mass-matrix/"
-        - name: "RA: Inverse dynamics demonstration (Tutorial)"
-          url: "https://www.roboanalyzer.com/tutorials.html"
+  sessions: []
 
 - week: 16
   dates: ["Mar 22–28, 2027"]
-  sessions:
-    - id: "C43"
-      date: ""
-      unit: "V"
-      topic: "Static force analysis of robots, Relationship between joint torques and end-effector forces"
-      notes: []
-      reading:
-        - "SBN 6.5"
-      resources:
-        - name: "Modern Robotics: Serial-chain statics"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-2-statics-of-open-chains/"
-        - name: "Saha: Statics and Manipulator Design"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C44"
-      date: ""
-      unit: "V"
-      topic: "Transformation of forces and moments between coordinate frames"
-      notes: []
-      reading:
-        - "SBN 6.6"
-      resources:
-        - name: "Modern Robotics: Combined force and moment representation"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-4-wrenches/"
-        - name: "Saha: Statics and Manipulator Design"
-          url: "https://www.mheducation.co.in/introduction-to-robotics-9789355326461-india"
-    - id: "C45"
-      date: ""
-      unit: "V"
-      topic: "Static force analysis of robots: Combined problem and course review"
-      notes: []
-      reading:
-        - "SBN 6.4–6.6"
-      resources:
-        - name: "Modern Robotics: Serial-chain statics"
-          url: "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-2-statics-of-open-chains/"
-        - name: "Spong: Dynamics"
-          url: "https://faculty.cc.gatech.edu/~seth/index.php?u=spongbook"
+  sessions: []
 
 - week: 17
   dates: ["Mar 29–Apr 3, 2027"]
-  sessions:
-    - id: "Buffer"
-      date: ""
-      unit: "Review"
-      topic: "Review/Buffer week"
-      notes: []
-      reading: []
-      resources: []
+  sessions: []
